@@ -1,3 +1,33 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+    link:
+        create: true
+        relink: true
+
+
+#- clean: []
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux.conf
+    ~/.zshrc: zshrc
+    ~/bin: bin/
+    ~/.Xresources: Xresources
+    ~/.xinitrc: xinitrc
+    ~/.config/i3: i3/
+    ~/.config/termite: termite/
+    ~/.config/sway: sway/
+    ~/.config/waybar: waybar/
+    ~/.config/nvim/init.vim: init.vim
+    ~/.config/nvim/coc-settings.json: coc-settings.json
+    ~/.config/rofi: rofi/
+    ~/.config/dunst: dunst/
+    ~/.config/polybar: polybar/
+    ~/.config/picom/picom.conf: picom.conf
+
+
+
+
+#- shell: []

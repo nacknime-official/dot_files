@@ -1,0 +1,17 @@
+{
+    "python.analysis.downloadChannel": "beta",
+    "python.jediEnabled": false,
+    "python.formatting.provider": "black",
+    "python.autoComplete.addBrackets": true,
+    "coc.preferences.formatOnSaveFiletypes": ["python"],
+    "suggest.noselect": false,
+    "html.enable": true, 
+    "html.format.enable": true,
+    "json.format.enable": true,
+    "python.autoComplete.extraPaths": [
+        "/usr/bin/python3"
+    ],
+
+    "yaml.format.enable": true,
+    "yaml.format.bracketSpacing": true
+}
