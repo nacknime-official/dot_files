@@ -27,6 +27,7 @@
     ~/.config/dunst: dunst/
     ~/.config/polybar: polybar/
     ~/.config/picom/picom.conf: picom.conf
+    ~/.config/mako/config: mako/config
 
 
 

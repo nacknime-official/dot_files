@@ -1,0 +1,10 @@
+font=FiraGO12
+background-color=#1d1f21CC
+text-color=#cccccc
+
+width=600
+height=300
+border-color=#66cc99
+border-radius=3
+
+# vim: ft=cfg

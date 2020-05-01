@@ -158,8 +158,9 @@ client.background       $bg
 # STARTUP APPLICATIONS #
 #----------------------#
 
+exec_always swayidle -w timeout 300 'swaylock -f -i ~/.config/sway/wp_blur.png' timeout 360 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f -i ~/.config/sway/wp_blur.png'
 #exec_always xrandr --dpi 120
-exec_always ~/stretchly/stretchly &
+exec_always ~/stretchly/stretchly
 # Keyboard layout
 #exec_always setxkbmap -layout us,ru && setxkbmap -option 'grp:alt_shift_toggle' &
 
@@ -167,7 +168,8 @@ exec_always ~/stretchly/stretchly &
 #exec_always xrdb ~/.Xresources &
 exec_always autotiling
 #exec_always bash ~/.config/polybar/launch.sh
-exec_always dunst &
+#exec_always dunst
+exec_always mako
 exec telegram-desktop -startintray &
 #exec_always killall compton; compton --config ~/.config/compton/compton.conf &
 #exec_always killall conky; conky &
