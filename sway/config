@@ -337,4 +337,7 @@ bindsym --to-code {
     XF86MonBrightnessUp exec light -A 10
     XF86MonBrightnessDown exec light -U 10
     $mod+Shift+r reload
+
+    $mod+grave exec makoctl dismiss
+    $mod+$alt+grave exec makoctl dismiss -a
 }
