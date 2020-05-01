@@ -130,5 +130,7 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
+alias r='ranger'
+
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
