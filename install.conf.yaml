@@ -29,6 +29,7 @@
     ~/.config/picom/picom.conf: picom.conf
     ~/.config/mako/config: mako/config
     ~/.oh-my-zsh/themes/robbyrussell.zsh-theme: oh-my-zsh/themes/robbyrussell.zsh-theme
+    ~/.config/swaylock/config: swaylock/config
 
 
 

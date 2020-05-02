@@ -158,7 +158,7 @@ client.background       $bg
 # STARTUP APPLICATIONS #
 #----------------------#
 
-exec_always swayidle -w timeout 300 'swaylock -f -i ~/.config/sway/wp_blur.png' timeout 360 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f -i ~/.config/sway/wp_blur.png'
+exec_always swayidle -w timeout 300 'swaylock' timeout 360 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock'
 #exec_always xrandr --dpi 120
 exec_always ~/stretchly/stretchly
 # Keyboard layout
@@ -340,4 +340,6 @@ bindsym --to-code {
 
     $mod+grave exec makoctl dismiss
     $mod+$alt+grave exec makoctl dismiss -a
+
+    $mod+$alt+l exec swaylock 
 }

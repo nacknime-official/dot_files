@@ -1,0 +1,4 @@
+# vim ft:conf
+
+daemonize
+image=~/.config/sway/wp_blur.png

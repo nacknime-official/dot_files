@@ -25,11 +25,11 @@ power() {
 
 	SELECTED_STRING=$(echo -e "$ACTION_LIST" | _rofi)
 	if [ "$SELECTED_STRING" == "lock" ]; then
-		betterlockscreen -l dim -t "Don't touch my machine!"
+        swaylock
 	elif [ "$SELECTED_STRING" == "suspend" ]; then
-		betterlockscreen -s dim -t "Don't touch my machine!"
+        systemctl suspend
 	elif [ "$SELECTED_STRING" == "logout" ]; then
-		i3-msg exit
+        swaymsg exit
 	elif [ "$SELECTED_STRING" == "reboot" ]; then
 		systemctl reboot
 	elif [ "$SELECTED_STRING" == "shutdown" ]; then
