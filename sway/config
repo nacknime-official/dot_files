@@ -160,7 +160,8 @@ client.background       $bg
 
 exec_always swayidle -w timeout 300 'swaylock' timeout 360 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock'
 #exec_always xrandr --dpi 120
-exec_always ~/stretchly/stretchly
+#exec_always ~/stretchly/stretchly
+exec_always safeeyes
 # Keyboard layout
 #exec_always setxkbmap -layout us,ru && setxkbmap -option 'grp:alt_shift_toggle' &
 
