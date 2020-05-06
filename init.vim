@@ -654,6 +654,11 @@ endfunction
 "yaml tabstop 4
 autocmd FileType yaml setlocal ts=4 sts=4 sw=4
 
+"Terminal
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-j> <C-\><C-N><C-w>j
+tnoremap <C-k> <C-\><C-N><C-w>k
+
 " Include user's custom nvim configurations
 if filereadable(expand("~/.config/nvim/custom.vim"))
   source ~/.config/nvim/custom.vim
