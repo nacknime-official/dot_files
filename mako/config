@@ -6,5 +6,6 @@ width=600
 height=300
 border-color=#66cc99
 border-radius=3
+layer=overlay
 
 # vim: ft=cfg
