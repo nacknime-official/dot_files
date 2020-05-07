@@ -1,1 +1,1 @@
-exec startplasma-x11
+exec i3
