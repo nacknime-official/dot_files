@@ -37,7 +37,7 @@ call plug#begin('~/.config/nvim/plugged')
 "========================================
 "Plugins Golang
 "========================================
-Plug 'fatih/vim-go'                            " Go support
+"Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Now the actual plugins:
 
