@@ -182,6 +182,7 @@ exec /usr/lib/polkit-kde-authentication-agent-1 &
 exec /usr/lib/kdeconnectd &
 #exec xcalib -v '/home/soul/Acer Swift 3 SF315-41.icm' &
 exec redshift &
+exec_always libinput-gestures
 
 #---------------#
 # SPECIAL CASES #
