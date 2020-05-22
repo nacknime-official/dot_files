@@ -147,8 +147,9 @@ Plug 'vim-scripts/YankRing.vim'
 " Plug 'ryanoasis/vim-devicons'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
-"Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
+Plug 'iCyMind/NeoSolarized'
 "Plug 'rakr/vim-one'
 Plug 'tpope/vim-obsession'
 " indent
@@ -192,14 +193,14 @@ set nu
 set fillchars+=vert:\ 
 
 " russian keymap
-set keymap=ukrainian-jcukenwin
+"set keymap=ukrainian-jcukenwin
 "set keymap=russian-jcukenwin
-set iminsert=0
-set imsearch=0
+"set iminsert=0
+"set imsearch=0
 imap <M-Space> <C-^>
 nmap <F12> <C-^>
 
-colorscheme gruvbox
+colorscheme NeoSolarized
 "hi Normal guibg=NONE ctermbg=NONE
 "hi NonText guibg=NONE ctermbg=NONE
 "hi LineNr guibg=NONE ctermbg=NONE
@@ -411,7 +412,7 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 let g:lightline = {
-	\ 'colorscheme': 'wombat',
+	\ 'colorscheme': 'solarized',
 	\ 'active': {
 	\   'left': [ [ 'mode', 'paste' ],
 	\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ],
@@ -499,8 +500,8 @@ let g:coc_snippet_next = '<tab>'
 "let g:deoplete#enable_ignore_case = 1
 "let g:deoplete#enable_smart_case = 1
 " complete with words from any opened file
-let g:context_filetype#same_filetypes = {}
-let g:context_filetype#same_filetypes._ = '_'
+"let g:context_filetype#same_filetypes = {}
+"let g:context_filetype#same_filetypes._ = '_'
 
 " Jedi-vim ------------------------------
 
