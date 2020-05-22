@@ -126,7 +126,8 @@ gaps inner $inner
 #for_window [class="^.*"] default_border pixel 1
 default_border pixel 1
 
-set $fg #ebece6
+#set $fg #ebece6
+set $fg #073642
 set $bg #161520
 set $cl0 #29282f
 set $cl1 #bf3032
@@ -143,15 +144,13 @@ set $cl11 #d7e267
 set $cl12 #4665da
 set $cl13 #bc43d2
 set $cl14 #67c6da
-set $cl15 #ebece6
+#set $cl15 #ebece6
 
 # class                 border  backgr. text   indicator child_border
 client.focused          $cl7    $bg     $fg    $fg       $fg
 client.focused_inactive $cl0    $bg     $fg    $bg       $bg
 client.unfocused        $cl0    $bg     $fg    $bg       $bg
 client.urgent           $cl13   $bg     $cl13  $bg       $cl13
-client.placeholder      $bg     $bg     $fg    $bg       $fg
-
 client.background       $bg
 
 #----------------------#
