@@ -1,53 +1,86 @@
+/* List of colors */
+
+/* {
+    --base03:    #002b36;
+    --base02:    #073642;
+    --base01:    #586e75;
+    --base00:    #657b83;
+    --base0:     #839496;
+    --base1:     #93a1a1;
+    --base2:     #eee8d5;
+    --base3:     #fdf6e3;
+    --yellow:    #b58900;
+    --orange:    #cb4b16;
+    --red:       #dc322f;
+    --magenta:   #d33682;
+    --violet:    #6c71c4;
+    --blue:      #268bd2;
+    --cyan:      #2aa198;
+    --green:     #859900;
+} */
+
 * {
-    border:        none;
+    border: none;
     border-radius: 0;
-    font-family:   Noto Sans Nerd Font;
-    font-size:     16px;
-    box-shadow:    none;
-    text-shadow:   none;
-    transition-duration: 0s;
+    font-family: Noto Sans Nerd Font;
+    font-size: 16px;
+    min-height: 0;
 }
 
-window {
-    color:      rgba(217, 216, 216, 1);
-    background: rgba(35, 31, 32, 0.00);
+window#waybar {
+    background-color: #002b36;
+    /*color: #d33682;*/
+    color: #657b83;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
-window#waybar.solo {
-    color:      rgba(217, 216, 216, 1);
-    background: rgba(35, 31, 32, 0.85);
+window#waybar.hidden {
+    opacity: 0.2;
 }
 
 #workspaces {
-    margin: 0 5px;
+    border-bottom: 1px solid #586e75;
 }
 
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
-    padding:    0 5px;
-    color:      rgba(217, 216, 216, 0.4);
-}
-
-#workspaces button.visible {
-    color:      rgba(217, 216, 216, 1);
+    padding: 0 5px;
+    background-color: transparent;
+    color: #657b83;
+    border-bottom: 3px solid transparent;
 }
 
 #workspaces button.focused {
-    border-top: 3px solid rgba(217, 216, 216, 1);
-    border-bottom: 3px solid rgba(217, 216, 216, 0);
+    background-color: #073642;
+    border-bottom: 1px solid #ff0;
 }
 
 #workspaces button.urgent {
-    color:      rgba(238, 46, 36, 1);
+    background-color: #d33682;
 }
 
-#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-weather, #custom-mail {
+#mode {
+    background-color: #002b36;
+    border-bottom: 1px solid #dc322f;
+}
+
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+    /*padding: 0 10px;*/
+    /*margin: 0 2px;*/
     margin:     0px 6px 0px 10px;
-    min-width:  25px;
+    color: #657b83;
 }
 
-#clock {
-    margin:     0px 16px 0px 10px;
-    min-width:  140px;
+@keyframes blink {
+    to {
+        background-color: #d33682;
+        color: #93a1a1;
+    }
+}
+
+label:focus {
+    background-color: #073642;
 }
 
 #custom-spotify_previous, #custom-spotify_playpause, #custom-spotify_next {
@@ -74,4 +107,3 @@ window#waybar.solo {
 #custom-storage.critical {
     color:      rgba(238, 46, 36, 1);
 }
-
