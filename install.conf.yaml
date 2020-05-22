@@ -31,6 +31,7 @@
     ~/.oh-my-zsh/themes/robbyrussell.zsh-theme: oh-my-zsh/themes/robbyrussell.zsh-theme
     ~/.config/swaylock/config: swaylock/config
     ~/.config/libinput-gestures.conf: libinput-gestures.conf
+    ~/.config/ranger: ranger/
 
 
 
