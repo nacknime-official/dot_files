@@ -1,21 +1,21 @@
-neofetch
-export LIBVA_DRIVER_NAME="i965"
+#neofetch
+#export LIBVA_DRIVER_NAME="i965"
 
 # wayland
 export XDG_SESSION_TYPE=wayland
 #export QT_WAYLAND_FORCE_DPI=120
 export QT_QPA_PLATFORM=wayland-egl
-#export SDL_VIDEODRIVER=wayland
+export SDL_VIDEODRIVER=wayland
 export BEMENU_BACKEND=wayland
-export MESA_LOADER_DRIVER_OVERRIDE=i965
+#export MESA_LOADER_DRIVER_OVERRIDE=i965
 #export GDK_BACKEND=wayland
 
 # firefox
 export MOZ_ENABLE_WAYLAND=1
 export MOZ_ACCELERATED=1
 #export MOZ_WEBRENDER=1
-#export QT_STYLE_OVERRIDE="GTK+"
-#export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_STYLE_OVERRIDE="GTK+"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
