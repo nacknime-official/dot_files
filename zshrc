@@ -14,6 +14,7 @@ export BEMENU_BACKEND=wayland
 export MOZ_ENABLE_WAYLAND=1
 export MOZ_ACCELERATED=1
 #export MOZ_WEBRENDER=1
+export LD_LIBRARY_PATH=/usr/lib/
 export QT_STYLE_OVERRIDE="GTK+"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 # If you come from bash you might have to change your $PATH.
