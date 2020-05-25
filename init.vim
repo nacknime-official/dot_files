@@ -260,6 +260,8 @@ nnoremap <silent> // :noh<CR>
 " (neomake, ...)
 set shell=/bin/bash 
 
+" height of the complete window
+set pumheight=20
 " Ability to add python breakpoints
 " (I use ipdb, but you can change it to whatever tool you use for debugging)
 "au FileType python map <silent> <leader>b Oimport ipdb; ipdb.set_trace()<esc>
