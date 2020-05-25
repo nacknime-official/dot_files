@@ -187,10 +187,6 @@ exec_always libinput-gestures
 # SPECIAL CASES #
 #---------------#
 
-# Telegram
-for_window [app_id="telegramdesktop"]                           floating enable,    resize set 452 1039,    move position 20 0
-for_window [title="Media viewer"]                       fullscreen enable
-
 # KeePassXC
 for_window [app_id="org.keepassxc.KeePassXC"]                          floating enable,    resize set 1280 720,    move position center
 
@@ -241,6 +237,7 @@ assign [class="Deluge" window_type="normal"] $ws4
 assign [class="mpv"] $ws5
 assign [class="Steam" title="Steam"] $ws6
 assign [class="discord"] $ws7
+assign [app_id="telegramdesktop"] $ws5
 for_window [class="Spotify"] move to workspace $ws10
 
 # vim: set ft=i3config:
