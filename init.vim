@@ -34,6 +34,8 @@ endif
 " want to use
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'dsznajder/vscode-es7-javascript-react-snippets', {
+      \ 'do': 'yarn install --frozen-lockfile && yarn compile' }
 "========================================
 "Plugins Golang
 "========================================
