@@ -1,5 +1,6 @@
 #neofetch
 #export LIBVA_DRIVER_NAME="i965"
+export TERM=xterm-256color
 
 # wayland
 export XDG_SESSION_TYPE=wayland
