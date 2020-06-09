@@ -255,6 +255,7 @@ input "1267:32:Elan_Touchpad" {
 
 input * xkb_layout "us,ru"
 input * xkb_options "grp:caps_toggle, shift:both_capslock"
+input * repeat_delay 200
 
 # bar
 bar {
