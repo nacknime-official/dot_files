@@ -325,7 +325,7 @@ bindsym --to-code {
     $mod+e exec ~/.config/rofi/rofi.sh -p
     Print exec  ~/.config/rofi/rofi.sh -s
     $mod+m exec ~/.config/rofi/rofi.sh -e
-    $mod+Return exec termite
+    $mod+Return exec kitty
     $mod+Tab exec pcmanfm
     $mod+a exec firefox
     $mod+t exec telegram-desktop
