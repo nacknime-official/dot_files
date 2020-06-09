@@ -32,6 +32,7 @@
     ~/.config/swaylock/config: swaylock/config
     ~/.config/libinput-gestures.conf: libinput-gestures.conf
     ~/.config/ranger: ranger/
+    ~/.config/kitty: kitty/
 
 
 
