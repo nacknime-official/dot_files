@@ -137,3 +137,5 @@ alias r='ranger'
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
