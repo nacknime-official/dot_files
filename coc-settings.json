@@ -1,17 +1,41 @@
 {
-    "python.analysis.downloadChannel": "beta",
-    "python.jediEnabled": false,
-    "python.formatting.provider": "black",
-    "python.autoComplete.addBrackets": true,
-    "coc.preferences.formatOnSaveFiletypes": ["python"],
-    "suggest.noselect": false,
-    "html.enable": true, 
-    "html.format.enable": true,
-    "json.format.enable": true,
-    "python.autoComplete.extraPaths": [
-        "/usr/bin/python3"
-    ],
+  "python.jediEnabled": true,
+  "python.linting.enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": false,
+  "diagnostic.refreshOnInsertMode": true,
+  "python.formatting.provider": "black",
+  "python.autoComplete.addBrackets": true,
+  "suggest.noselect": false,
+  "suggest.enablePreview": true,
+  "python.globalModuleInstallation": true,
+  "codeLens.enable": true,
 
-    "yaml.format.enable": true,
-    "yaml.format.bracketSpacing": true
+  "yaml.format.bracketSpacing": true,
+
+  "suggest.maxPreviewWidth": 100,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.maxWindowHeight": 20,
+  "diagnostic.errorSign": "✖",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "●",
+  "diagnostic.hintSign": "○",
+  "diagnostic.enableSign": true,
+
+  "explorer.icon.enableNerdfont": true,
+  "explorer.sources": [
+    { "name": "buffer", "expand": true },
+    { "name": "file", "expand": true }
+  ],
+  "explorer.file.column.git.icon.added": "✚",
+  "explorer.file.column.git.icon.deleted": "✖",
+  "explorer.file.column.git.icon.renamed": "➜",
+  "explorer.file.column.git.icon.unmerged": "═",
+  "explorer.file.column.git.icon.untracked": "?",
+  "explorer.file.column.git.icon.modified": "✹",
+  "explorer.file.column.git.icon.ignored": "☒",
+  "explorer.previewAction.onHover": false,
+  "explorer.keyMappings": {
+    "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"]
+  }
 }
