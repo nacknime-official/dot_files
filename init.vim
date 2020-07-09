@@ -137,6 +137,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 "Plug 'rakr/vim-one'
+Plug 'lifepillar/vim-gruvbox8'
 Plug 'tpope/vim-obsession'
 " markdown
 "Plug 'godlygeek/tabular'
@@ -223,7 +224,7 @@ imap <M-Space> <C-^>
 nmap <F12> <C-^>
 
 " colorscheme {{{
-colorscheme onedark
+colorscheme gruvbox8
 set background=dark
 "let g:material_theme_style = 'dark'
 "let g:one_allow_italics = 1
