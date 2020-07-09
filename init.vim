@@ -412,7 +412,6 @@ let g:coc_global_extensions = [
     \ 'coc-git',
     \ 'coc-eslint',
     \ 'coc-tslint-plugin',
-    \ 'coc-pairs',
     \ 'coc-sh',
     \ 'coc-vimlsp',
     \ 'coc-emmet',
