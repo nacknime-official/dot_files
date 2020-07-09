@@ -104,7 +104,7 @@ Plug 'ap/vim-css-color'
 "Plug 'valloric/MatchTagAlways'
 
 " Generate html in a simple way
-"Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 " Git integration
 Plug 'tpope/vim-fugitive'
