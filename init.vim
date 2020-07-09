@@ -135,7 +135,6 @@ Plug 'vim-scripts/argtextobj.vim'
 
 Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
-Plug 'iCyMind/NeoSolarized'
 Plug 'joshdick/onedark.vim'
 "Plug 'rakr/vim-one'
 Plug 'tpope/vim-obsession'
