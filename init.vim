@@ -21,8 +21,6 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Shougo/neco-vim'
-Plug 'neoclide/coc-neco'
 "Plug 'neovim/nvim-lsp'
 "Plug 'haorenW1025/completion-nvim'
 "Plug 'haorenW1025/diagnostic-nvim'
