@@ -146,6 +146,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': 'ma
 
 " Python folding
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
+Plug 'Konfekt/FastFold'
 call plug#end()
 " end plugins }}}
 
