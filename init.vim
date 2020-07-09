@@ -430,6 +430,7 @@ nmap [g <Plug>(coc-git-prevchunk)
 nmap ]g <Plug>(coc-git-nextchunk)
 nmap gs <Plug>(coc-git-chunkinfo)
 nmap gu :CocCommand git.chunkUndo<cr>
+xmap gu :CocCommand git.chunkUndo<cr>
 
 nmap <silent> <leader>k :CocCommand explorer<cr>
 " use <tab> for trigger completion and navigate to the next complete item
