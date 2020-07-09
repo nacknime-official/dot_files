@@ -365,9 +365,6 @@ let g:signify_vcs_list = [ 'git', 'hg' ]
 nmap <leader>sn <plug>(signify-next-hunk)
 nmap <leader>sp <plug>(signify-prev-hunk)
 " nicer colors
-highlight DiffAdd           cterm=bold ctermbg=none  ctermfg=119 guifg=#98C379 guibg=none
-highlight DiffDelete        cterm=bold ctermbg=none  ctermfg=167 guifg=#E06C75 guibg=none
-highlight DiffChange        cterm=bold ctermbg=none  ctermfg=227 guifg=#E5C07B guibg=none
 highlight SignifySignAdd    cterm=bold ctermbg=237  ctermfg=119
 highlight SignifySignDelete cterm=bold ctermbg=237  ctermfg=167
 highlight SignifySignChange cterm=bold ctermbg=237  ctermfg=227
