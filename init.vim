@@ -44,8 +44,6 @@ Plug 'scrooloose/nerdcommenter'
 
 " Class/module browser
 "Plug 'majutsushi/tagbar'
-" TODO known problems:
-" * current block not refreshing
 
 " Search results counter
 "Plug 'vim-scripts/IndexedSearch'
@@ -95,17 +93,12 @@ Plug 'sheerun/vim-polyglot'
 
 " Ack code search (requires ack installed in the system)
 "Plug 'mileszs/ack.vim'
-" TODO is there a way to prevent the progress which hides the editor?
 
 " Paint css colors with the real color
 Plug 'ap/vim-css-color'
-" TODO is there a better option for neovim?
 
 " Window chooser
 "Plug 't9md/vim-choosewin'
-
-" Automatically sort python imports
-"Plug 'fisadev/vim-isort'
 
 " Highlight matching html tags
 "Plug 'valloric/MatchTagAlways'
@@ -140,7 +133,6 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'vim-scripts/argtextobj.vim'
 
-" Tell vim-plug we finished declaring plugins, so it can load them
 Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
 Plug 'iCyMind/NeoSolarized'
