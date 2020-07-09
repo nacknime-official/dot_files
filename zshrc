@@ -20,7 +20,7 @@ export MOZ_ACCELERATED=1
 export MOZ_WEBRENDER=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.dotnet:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
