@@ -55,22 +55,24 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{icon} {temperatureC}°C",
+        "format": "{icon}",
+        "format-alt": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "backlight": {
         "format": "{icon}",
-        "format-alt": "{percent}% {icon}",
+        "format-alt": "{icon} {percent}%",
         "format-alt-click": "click-right",
         "format-icons": ["", ""],
         "on-scroll-down": "light -U 1",
         "on-scroll-up": "light -A 1"
     },
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-alt": "{time} {icon}",
+        "format": "{icon}",
+        "format-alt": "{icon} {capacity}% {time}",
+        "format-alt-click": "click-right",
         "format-icons": ["", "", "", "", ""],
-        "format-charging": "{capacity}% ",
+        "format-charging": "",
         "interval": 30,
         "states": {
             "warning": 25,
@@ -91,8 +93,8 @@
         "tooltip": false
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-alt": "{volume} {icon}",
+        "format": "{icon}",
+        "format-alt": "{icon} {volume}%",
         "format-alt-click": "click-right",
         "format-muted": "",
         "format-icons": {
@@ -123,13 +125,13 @@
     "custom/spotify_next": {
         "interval": 3,
         "exec-if": "pgrep spotify",
-        "exec": "echo 'ﭡ'",
+        "exec": "echo ",
         "on-click": "playerctl next --player=spotify"
     }, 
     "custom/spotify_previous": {
         "interval": 3,
         "exec-if": "pgrep spotify",
-        "exec": "echo ﭣ",
+        "exec": "echo ",
         "on-click": "playerctl previous --player=spotify"
     } 
 }

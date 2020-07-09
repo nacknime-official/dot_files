@@ -22,38 +22,38 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Noto Sans Nerd Font;
+    font-family:  FontAwesome5FreeSolid;
     font-size: 16px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: #002b36;
+    background-color: #2E3440;
     /*color: #d33682;*/
-    color: #657b83;
-    transition-property: background-color;
-    transition-duration: .5s;
+    /*color: #657b83;*/
+    /*transition-property: background-color;*/
+    /*transition-duration: .5s;*/
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-#workspaces {
-    border-bottom: 1px solid #586e75;
-}
+/*#workspaces {*/
+    /*border-bottom: 1px solid #586e75;*/
+/*}*/
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #657b83;
+    color: #8FBCBB;
     border-bottom: 3px solid transparent;
 }
 
 #workspaces button.focused {
-    background-color: #073642;
-    border-bottom: 1px solid #ff0;
+    /*background-color: #073642;*/
+    border-bottom: 3px solid #8FBCBB;
 }
 
 #workspaces button.urgent {
@@ -68,8 +68,10 @@ window#waybar.hidden {
 #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
     /*padding: 0 10px;*/
     /*margin: 0 2px;*/
-    margin:     0px 6px 0px 10px;
-    color: #657b83;
+    /*margin:     0px 6px 0px 10px;*/
+    /*margin: 2px;*/
+    padding: 0 6px;
+    color: #81A1C1;
 }
 
 @keyframes blink {
@@ -83,9 +85,10 @@ label:focus {
     background-color: #073642;
 }
 
-#custom-spotify_previous, #custom-spotify_playpause, #custom-spotify_next {
-    font-size: 20px;
-    margin: 0px 3px 0px 3px;
+#custom-spotify_previous, #custom-spotify_playpause, #custom-spotify_next, #custom-spotify_status {
+    /*font-size: 20px;*/
+    padding: 0 3px;
+    color: #81A1C1;
 }
 
 #battery.warning {
