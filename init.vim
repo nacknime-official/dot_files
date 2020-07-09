@@ -89,8 +89,8 @@ Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 
 " Better language packs
-Plug 'sheerun/vim-polyglot'
-
+"Plug 'sheerun/vim-polyglot'
+Plug 'vim-python/python-syntax' | let g:python_highlight_all = 1
 " Ack code search (requires ack installed in the system)
 "Plug 'mileszs/ack.vim'
 
