@@ -6,6 +6,7 @@ export XCURSOR_THEME="Breeze_Snow"
 
 # wayland
 export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=sway
 #export QT_WAYLAND_FORCE_DPI=120
 export QT_QPA_PLATFORM=wayland-egl
 export SDL_VIDEODRIVER=wayland
