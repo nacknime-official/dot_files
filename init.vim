@@ -416,7 +416,7 @@ let g:coc_global_extensions = [
     \ 'coc-vimlsp',
     \ 'coc-emmet',
     \ 'coc-prettier',
-    \ 'coc-ultisnips',
+    \ 'coc-snippets',
     \ 'coc-explorer',
     \ 'coc-diagnostic'
     \ ]
