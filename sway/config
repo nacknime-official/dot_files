@@ -343,3 +343,6 @@ bindsym --to-code {
 
     $mod+$alt+l exec swaylock 
 }
+
+# set cursor theme
+seat seat0 xcursor_theme Breeze_Snow 24

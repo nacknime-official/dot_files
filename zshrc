@@ -2,6 +2,7 @@
 #export LIBVA_DRIVER_NAME="i965"
 export TERM=xterm-256color
 export _JAVA_AWT_WM_NONREPARENTING=1
+export XCURSOR_THEME="Breeze_Snow"
 
 # wayland
 export XDG_SESSION_TYPE=wayland
