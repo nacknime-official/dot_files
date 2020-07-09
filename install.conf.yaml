@@ -34,6 +34,7 @@
     ~/.config/ranger: ranger/
     ~/.config/kitty: kitty/
     ~/.config/alacritty: alacritty/
+    ~/.config/mpv: mpv/
 
 
 
