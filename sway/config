@@ -314,7 +314,7 @@ bindsym --to-code {
     $mod+m exec ~/.config/rofi/rofi.sh -e
     $mod+Return exec alacritty
     $mod+Tab exec pcmanfm
-    $mod+a exec firefox-nightly
+    $mod+a exec firefox
     $mod+t exec telegram-desktop
     $mod+o gaps outer current set $outer; gaps inner current set $inner
     $mod+i gaps outer current set 0; gaps inner current set 0
