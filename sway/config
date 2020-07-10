@@ -126,32 +126,19 @@ gaps inner $inner
 #for_window [class="^.*"] default_border pixel 1
 default_border pixel 1
 
-#set $fg #ebece6
-set $fg #073642
-set $bg #161520
-set $cl0 #29282f
-set $cl1 #bf3032
-set $cl2 #30bf54
-set $cl3 #b1bf30
-set $cl4 #303ebf
-set $cl5 #aa30bf
-set $cl6 #30a7bf
-set $cl7 #bfbfb8
-set $cl8 #63626a
-set $cl9 #fa3e48
-set $cl10 #50fa7b
-set $cl11 #d7e267
-set $cl12 #4665da
-set $cl13 #bc43d2
-set $cl14 #67c6da
-#set $cl15 #ebece6
+### Palette
+set $black          #3b4252
+set $gray           #d8dee9
+set $lred           #bf616a
+set $blue           #5e81ac
+set $lblue          #88c0d0
+set $inactive_gray  #222222
 
-# class                 border  backgr. text   indicator child_border
-client.focused          $cl7    $bg     $fg    $fg       $fg
-client.focused_inactive $cl0    $bg     $fg    $bg       $bg
-client.unfocused        $cl0    $bg     $fg    $bg       $bg
-client.urgent           $cl13   $bg     $cl13  $bg       $cl13
-client.background       $bg
+# Color                 border    background text    indicator  child_border
+client.focused          $blue     $blue      $gray   $blue      $blue
+client.focused_inactive $inactive_gray       $black  $gray      $inactive_gray
+client.unfocused        $black    $black     $gray   $black     $blue
+client.urgent           $lred     $black     $gray   $lred      $lblue
 
 #----------------------#
 # STARTUP APPLICATIONS #
