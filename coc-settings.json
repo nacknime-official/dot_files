@@ -37,5 +37,8 @@
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings": {
     "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"]
-  }
+  },
+  "git.addedSign.hlGroup": "SignifySignAdd",
+  "git.changedSign.hlGroup": "SignifySignChange",
+  "git.removedSign.hlGroup": "SignifySignDelete"
 }
