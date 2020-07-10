@@ -134,7 +134,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/argtextobj.vim'
 
 Plug 'arcticicestudio/nord-vim'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'joshdick/onedark.vim'
 "Plug 'rakr/vim-one'
 Plug 'lifepillar/vim-gruvbox8'
@@ -222,7 +222,7 @@ imap <M-Space> <C-^>
 nmap <F12> <C-^>
 
 " colorscheme {{{
-colorscheme gruvbox8
+colorscheme gruvbox
 set background=dark
 "let g:material_theme_style = 'dark'
 "let g:one_allow_italics = 1
