@@ -111,8 +111,8 @@ mode "resize" {
 
 #smart_gaps on
 
-set $outer 2
-set $inner 3
+set $outer 7
+set $inner 7
 gaps outer $outer
 gaps inner $inner
 
