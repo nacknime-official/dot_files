@@ -169,6 +169,7 @@ exec /usr/lib/kdeconnectd &
 #exec xcalib -v '/home/soul/Acer Swift 3 SF315-41.icm' &
 exec redshift &
 exec_always libinput-gestures
+exec_always pcmanfm-qt -d
 
 #---------------#
 # SPECIAL CASES #
@@ -178,7 +179,7 @@ exec_always libinput-gestures
 for_window [app_id="org.keepassxc.KeePassXC"]                          floating enable,    resize set 1280 720,    move position center
 
 # pcmanfm
-for_window [class="(?i)pcmanfm" window_type="normal"]   floating enable,    resize set 1280 720,    move position center
+for_window [app_id="pcmanfm-qt"]   floating enable,    resize set 1280 720,    move position center
 
 # sxiv
 for_window [class="Sxiv"]                               floating enable,    resize set 1280 720,    move position center
@@ -313,7 +314,7 @@ bindsym --to-code {
     Print exec  ~/.config/rofi/rofi.sh -s
     $mod+m exec ~/.config/rofi/rofi.sh -e
     $mod+Return exec alacritty
-    $mod+Tab exec pcmanfm
+    $mod+Tab exec pcmanfm-qt
     $mod+a exec firefox
     $mod+t exec telegram-desktop
     $mod+o gaps outer current set $outer; gaps inner current set $inner
