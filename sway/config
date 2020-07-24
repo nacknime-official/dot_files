@@ -323,6 +323,7 @@ bindsym --to-code {
     XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
     XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
     XF86AudioMute exec pactl set-sink-mute 0 toggle
+    XF86AudioPlay exec playerctl play-pause
     XF86MonBrightnessUp exec light -A 10
     XF86MonBrightnessDown exec light -U 10
     $mod+Shift+r reload
