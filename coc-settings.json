@@ -47,5 +47,6 @@
   "git.topRemovedSign.hlGroup": "SignifySignDelete",
 
   "snippets.extends": { "html": ["htmldjango"], "python": ["django"] },
-  "suggest.minTriggerInputLength": 2
+  "suggest.minTriggerInputLength": 2,
+  "suggest.defaultSortMethod": "alphabetical"
 }
