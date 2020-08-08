@@ -43,7 +43,7 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Class/module browser
-"Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 
 " Search results counter
 "Plug 'vim-scripts/IndexedSearch'
