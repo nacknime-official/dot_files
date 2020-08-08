@@ -44,5 +44,7 @@
   "git.addedSign.hlGroup": "SignifySignAdd",
   "git.changedSign.hlGroup": "SignifySignChange",
   "git.removedSign.hlGroup": "SignifySignDelete",
-  "git.topRemovedSign.hlGroup": "SignifySignDelete"
+  "git.topRemovedSign.hlGroup": "SignifySignDelete",
+
+  "snippets.extends": { "html": ["htmldjango"], "python": ["django"] }
 }
