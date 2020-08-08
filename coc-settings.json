@@ -1,10 +1,13 @@
 {
   "python.jediEnabled": true,
+  "python.jediPath": "/usr/lib/python3.8/site-packages/",
   "python.linting.enabled": true,
   "python.linting.mypyEnabled": true,
+  "python.linting.mypyPath": "/usr/bin/mypy",
   "python.linting.pylintEnabled": false,
   "diagnostic.refreshOnInsertMode": true,
   "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/usr/bin/black",
   "python.autoComplete.addBrackets": true,
   "suggest.noselect": false,
   "suggest.enablePreview": true,
