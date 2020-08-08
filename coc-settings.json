@@ -43,5 +43,6 @@
   },
   "git.addedSign.hlGroup": "SignifySignAdd",
   "git.changedSign.hlGroup": "SignifySignChange",
-  "git.removedSign.hlGroup": "SignifySignDelete"
+  "git.removedSign.hlGroup": "SignifySignDelete",
+  "git.topRemovedSign.hlGroup": "SignifySignDelete"
 }
