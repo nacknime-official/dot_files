@@ -222,6 +222,8 @@ imap <M-Space> <C-^>
 nmap <F12> <C-^>
 
 " colorscheme {{{
+let g:gruvbox_bold = 0
+let g:gruvbox_italic = 1
 colorscheme gruvbox
 set background=dark
 "let g:material_theme_style = 'dark'
