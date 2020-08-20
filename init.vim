@@ -197,6 +197,9 @@ set title " set terminal title
 set showmatch " show matching braces
 
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
+
+set concealcursor=c " disable concealing when cursor on the line
+set conceallevel=2
 " switch cursor to line when in insert mode, and block when not
 
 " enable 24 bit color support if supported
@@ -539,6 +542,7 @@ set shortmess+=c
 
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_enabled = 1
+let g:indentLine_setConceal = 0
 
 " Markdown
 let g:mkdp_auto_start = 1
