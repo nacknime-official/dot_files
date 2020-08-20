@@ -402,6 +402,7 @@ let g:coc_global_extensions = [
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <leader>f :CocCommand prettier.formatFile<cr>
+nmap <F2> :call CocActionAsync('format')<CR>
 
 " coc-git
 nmap [g <Plug>(coc-git-prevchunk)
