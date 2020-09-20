@@ -49,5 +49,7 @@
   "snippets.extends": { "html": ["htmldjango"], "python": ["django"] },
   "suggest.minTriggerInputLength": 2,
   "suggest.defaultSortMethod": "alphabetical",
-  "diagnostic.messageDelay": 0
+  "diagnostic.messageDelay": 0,
+  "suggest.languageSourcePriority": 100,
+  "tabnine.priority": 99
 }
