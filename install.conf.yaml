@@ -36,6 +36,7 @@
     ~/.config/alacritty: alacritty/
     ~/.config/mpv: mpv/
     ~/.config/gtk-3.0: gtk-3.0/
+    ~/.config/nvim/plugged/vimspector/configurations: vimspector/configurations/
 
 
 

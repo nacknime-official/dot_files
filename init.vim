@@ -147,6 +147,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': 'ma
 " Python folding
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 Plug 'Konfekt/FastFold'
+
+Plug 'puremourning/vimspector' | let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 call plug#end()
 " end plugins }}}
 
