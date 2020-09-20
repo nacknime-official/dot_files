@@ -95,7 +95,7 @@ Plug 'vim-python/python-syntax' | let g:python_highlight_all = 1
 "Plug 'mileszs/ack.vim'
 
 " Paint css colors with the real color
-Plug 'ap/vim-css-color'
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Window chooser
 "Plug 't9md/vim-choosewin'
@@ -210,6 +210,7 @@ if (has("termguicolors"))
     endif
     set termguicolors
 endif
+lua require'colorizer'.setup()
 
 " highlight conflicts
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
@@ -387,7 +388,6 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 let g:coc_global_extensions = [
     \ 'coc-python',
-    \ 'coc-css',
     \ 'coc-json',
     \ 'coc-tsserver',
     \ 'coc-git',
