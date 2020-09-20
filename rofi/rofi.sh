@@ -17,10 +17,10 @@ nm() {
 }
 
 power() {
-	ACTION_LIST="lock\nsuspend\nlogout\nreboot\nshutdown"
+	ACTION_LIST="lock\nsuspend\nlogout\nreboot\nshutdown\nsuspend then hibernate"
 
 	_rofi() {
-		rofi -dmenu -i -sync -p "sys" -width 115 -lines 5
+		rofi -dmenu -i -sync -p "sys" -width 150 -lines 6
 	}
 
 	SELECTED_STRING=$(echo -e "$ACTION_LIST" | _rofi)
@@ -34,6 +34,8 @@ power() {
 		systemctl reboot
 	elif [ "$SELECTED_STRING" == "shutdown" ]; then
 		systemctl poweroff
+	elif [ "$SELECTED_STRING" == "suspend then hibernate" ]; then
+		systemctl suspend-then-hibernate
 	fi
 }
 
