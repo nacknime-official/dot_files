@@ -19,6 +19,10 @@ export MOZ_ENABLE_WAYLAND=1
 export MOZ_ACCELERATED=1
 export MOZ_WEBRENDER=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
+
+# telegram
+export TDESKTOP_DISABLE_TRAY_COUNTER=1 
+export TDESKTOP_DISABLE_GTK_INTEGRATION=1
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.dotnet:$HOME/bin:$PATH
 
