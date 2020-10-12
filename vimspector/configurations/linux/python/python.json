@@ -64,7 +64,8 @@
         //"args": ["-m", "app"],
          "module": "app",
         "stopOnEntry": false,
-        "console": "integratedTerminal"
+        "console": "integratedTerminal",
+        "justMyCode": false
       },
       "breakpoints": {
         "exception": {
