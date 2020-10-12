@@ -171,6 +171,7 @@ exec redshift &
 exec_always libinput-gestures
 exec_always pcmanfm-qt -d
 exec_always nextcloud
+exec wl-paste -t text --watch clipman store
 
 #---------------#
 # SPECIAL CASES #
