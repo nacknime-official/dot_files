@@ -318,7 +318,7 @@ let g:tagbar_autofocus = 1
 " CocExplorer -----------------------------
 
 " toggle coc_explorer display
-map <F3> :CocCommand explorer<CR>
+map <F3> :CocCommand explorer --sources=buffer-,file+<CR>
 
 " Tasklist ------------------------------
 

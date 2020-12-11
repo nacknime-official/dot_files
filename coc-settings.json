@@ -38,9 +38,10 @@
   "explorer.file.column.git.icon.modified": "✹",
   "explorer.file.column.git.icon.ignored": "☒",
   "explorer.previewAction.onHover": false,
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"]
   },
+  "explorer.width": 30,
   "git.addedSign.hlGroup": "SignifySignAdd",
   "git.changedSign.hlGroup": "SignifySignChange",
   "git.removedSign.hlGroup": "SignifySignDelete",
