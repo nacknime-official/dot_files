@@ -16,49 +16,79 @@ Xft*lcdfilter:  lcddefault
 !  Colors
 !----------------
 
-! special
-*.foreground:   #ebece6
-*.background:   #161520
-*.cursorColor:  #ebece6
+*foreground:        #d5d8dc
+*background:        #091C26
+*.foreground:       #d5d8dc
+*.background:       #091C26
+emacs*foreground:   #d5d8dc
+emacs*background:   #091C26
+URxvt*foreground:   #d5d8dc
+XTerm*foreground:   #d5d8dc
+UXTerm*foreground:  #d5d8dc
+URxvt*background:   [100]#091C26
+XTerm*background:   #091C26
+UXTerm*background:  #091C26
+URxvt*cursorColor:  #d5d8dc
+XTerm*cursorColor:  #d5d8dc
+UXTerm*cursorColor: #d5d8dc
+URxvt*borderColor:  [100]#091C26
 
-! black
-*.color0:       #29282f
-*.color8:       #63626a
+! Colors 0-15.
+*.color0: #091C26
+*color0:  #091C26
+*.color1: #4F6470
+*color1:  #4F6470
+*.color2: #667986
+*color2:  #667986
+*.color3: #778793
+*color3:  #778793
+*.color4: #919CA9
+*color4:  #919CA9
+*.color5: #A7AEBA
+*color5:  #A7AEBA
+*.color6: #B4BAC5
+*color6:  #B4BAC5
+*.color7: #d5d8dc
+*color7:  #d5d8dc
+*.color8: #95979a
+*color8:  #95979a
+*.color9: #4F6470
+*color9:  #4F6470
+*.color10: #667986
+*color10:  #667986
+*.color11: #778793
+*color11:  #778793
+*.color12: #919CA9
+*color12:  #919CA9
+*.color13: #A7AEBA
+*color13:  #A7AEBA
+*.color14: #B4BAC5
+*color14:  #B4BAC5
+*.color15: #d5d8dc
+*color15:  #d5d8dc
 
-! red
-*.color1:       #bf3032
-*.color9:       #fa3e48
+! Black color that will not be affected by bold highlighting.
+*.color66: #091C26
+*color66:  #091C26
 
-! green
-*.color2:       #30bf54
-*.color10:      #50fa7b
+! Xclock colors.
+XClock*foreground: #d5d8dc
+XClock*background: #091C26
+XClock*majorColor:  rgba:d5/d8/dc/ff
+XClock*minorColor:  rgba:d5/d8/dc/ff
+XClock*hourColor:   rgba:d5/d8/dc/ff
+XClock*minuteColor: rgba:d5/d8/dc/ff
+XClock*secondColor: rgba:d5/d8/dc/ff
 
-! yellow
-*.color3:       #b1bf30
-*.color11:      #d7e267
-
-! blue
-*.color4:       #303ebf
-*.color12:      #4665da
-
-! magenta
-*.color5:       #aa30bf
-*.color13:      #bc43d2
-
-! cyan
-*.color6:       #30a7bf
-*.color14:      #67c6da
-
-! white
-*.color7:       #bfbfb8
-*.color15:      #ebece6
+! Set depth to make transparency work.
+URxvt*depth: 32
 
 rofi.padding:         20
 rofi.hide-scrollbar:  true
 rofi.font:            FiraGO 12
 rofi.color-enabled:   true
 
-rofi.color-window:   #161520,#29282f,#00161520
-rofi.color-normal:   #00161520,#ebece6,#00161520,#00161520,#aa30bf
-rofi.color-active:   #00161520,#30bf54,#00161520,#00161520,#aa30bf
-rofi.color-urgent:   #00161520,#b1bf30,#00161520,#00161520,#aa30bf
+!rofi.color-window:   #161520,#29282f,#00161520
+!rofi.color-normal:   #00161520,#ebece6,#00161520,#00161520,#aa30bf
+!rofi.color-active:   #00161520,#30bf54,#00161520,#00161520,#aa30bf
+!rofi.color-urgent:   #00161520,#b1bf30,#00161520,#00161520,#aa30bf

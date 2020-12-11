@@ -124,21 +124,19 @@ gaps inner $inner
 
 # window border
 #for_window [class="^.*"] default_border pixel 1
-default_border pixel 1
+default_border pixel 2
 
 ### Palette
-set $black          #3b4252
-set $gray           #d8dee9
-set $lred           #bf616a
-set $blue           #5e81ac
-set $lblue          #88c0d0
-set $inactive_gray  #222222
+include "$HOME/.cache/wal/colors-sway"
 
-# Color                 border    background text    indicator  child_border
-client.focused          $blue     $blue      $gray   $blue      $blue
-client.focused_inactive $inactive_gray       $black  $gray      $inactive_gray
-client.unfocused        $black    $black     $gray   $black     $blue
-client.urgent           $lred     $black     $gray   $lred      $lblue
+# class                 border          background      text         indicator         child_border
+client.focused          $color2         $color2         $foreground  $color2           $color2
+client.focused_inactive $background     $background     $foreground  $background       $background
+client.unfocused        $background     $background     $foreground  $background       $background
+client.urgent           $color2         $color2         $foreground  $color2           $color2
+client.placeholder      $color2         $color2         $foreground  $color2           $color2
+
+client.background       $color2
 
 #----------------------#
 # STARTUP APPLICATIONS #
@@ -252,7 +250,7 @@ bar {
     swaybar_command waybar
 }
 
-output "*" background wp.png fill
+output "*" background $wallpaper fill
 #output eDP-1 scale 
 
 xwayland enable
