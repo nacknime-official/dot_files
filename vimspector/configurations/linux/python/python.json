@@ -65,7 +65,7 @@
          "module": "app",
         "stopOnEntry": false,
         "console": "integratedTerminal",
-        "justMyCode": false
+        "justMyCode": true
       },
       "breakpoints": {
         "exception": {
