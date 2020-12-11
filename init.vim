@@ -149,6 +149,11 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': 'ma
 Plug 'Konfekt/FastFold'
 
 Plug 'puremourning/vimspector' | let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
+Plug 'wsdjeg/vim-todo'
 call plug#end()
 " end plugins }}}
 
@@ -595,3 +600,7 @@ autocmd OptionSet background
   "autocmd VimEnter * sil! au! FileExplorer *
   "autocmd BufEnter * let d = expand('%') | if isdirectory(d) | bd | exe 'CocCommand explorer ' . d | endif
 "augroup END
+
+" limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
