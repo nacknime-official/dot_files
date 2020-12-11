@@ -52,5 +52,13 @@
   "suggest.defaultSortMethod": "alphabetical",
   "diagnostic.messageDelay": 0,
   "suggest.languageSourcePriority": 100,
-  "tabnine.priority": 99
+  "tabnine.priority": 99,
+  "eslint.nodePath": "~/.config/yarn/global/node_modules",
+  "eslint.options": {
+    "useEslintrc": false,
+    "env": { "es12": true },
+    "parserOptions": {
+      "ecmaVersion": 12
+    }
+  }
 }
