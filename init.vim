@@ -90,7 +90,8 @@ Plug 'Yggdroot/indentLine'
 
 " Better language packs
 "Plug 'sheerun/vim-polyglot'
-Plug 'vim-python/python-syntax' | let g:python_highlight_all = 1
+Plug 'nvim-treesitter/nvim-treesitter'
+"Plug 'romgrk/nvim-treesitter-context'
 " Ack code search (requires ack installed in the system)
 "Plug 'mileszs/ack.vim'
 
@@ -145,13 +146,34 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': 'markdown' }
 
 " Python folding
-Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 Plug 'Konfekt/FastFold'
 
 Plug 'puremourning/vimspector' | let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 call plug#end()
 " end plugins }}}
 
+
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "python",
+  highlight = {
+   enable = true,
+    use_languagetree = true,
+  },
+  indent = {
+    enable = true,
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
+  },
+}
+EOF
 
 let mapleader = ','
 " ============================================================================
@@ -175,7 +197,9 @@ set nu
 set termguicolors
 set ignorecase
 set scrolloff=7
-set foldmethod=marker foldlevel=0
+"set foldmethod=marker foldlevel=0
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 set hidden
 set autoread " detect when a file is changed
 set smartcase " case-sensitive if expresson contains a capital letter
