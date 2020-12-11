@@ -254,8 +254,14 @@ nmap <F12> <C-^>
 " colorscheme {{{
 let g:gruvbox_bold = 0
 let g:gruvbox_italic = 1
-colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
+let g:gruvbox_invert_selection = 0
+let g:gruvbox_sign_column = "dark0_hard"
+let g:onedark_terminal_italics = 1
+colorscheme gruvbox8_hard
 set background=dark
+
+hi SignColumn ctermbg=none guibg=none
 "let g:material_theme_style = 'dark'
 "let g:one_allow_italics = 1
 " colorscheme }}}
@@ -314,7 +320,7 @@ map <F3> :CocCommand explorer<CR>
 " show pending tasks list
 "map <F2> :TaskList<CR>
 let g:lightline = {
-    \ 'colorscheme': 'onedark',
+    \ 'colorscheme': 'gruvbox8',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'git', 'diagnostic', 'cocstatus', 'readonly', 'filename', 'modified' ] ],
@@ -577,9 +583,9 @@ let g:mkdp_auto_start = 1
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 " Lightline change colorscheme on the fly with vim's colorscheme
-"autocmd OptionSet background
-      "\ execute 'source' globpath(&rtp, 'autoload/lightline/colorscheme/solarized.vim')
-      "\ | call lightline#colorscheme() | call lightline#update()
+autocmd OptionSet background
+      \ execute 'source' globpath(&rtp, 'autoload/lightline/colorscheme/gruvbox.vim')
+      \ | call lightline#colorscheme() | call lightline#update()
 
 "inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", '\<C-y>')
 "call ncm2#override_source('LanguageClient_python', {'enable': 0})
