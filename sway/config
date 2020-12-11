@@ -155,7 +155,7 @@ exec_always autotiling
 #exec_always bash ~/.config/polybar/launch.sh
 #exec_always dunst
 exec_always mako
-exec telegram-desktop -startintray &
+exec_always kotatogram-desktop -startintray
 #exec_always killall compton; compton --config ~/.config/compton/compton.conf &
 #exec_always killall conky; conky &
 
@@ -225,7 +225,7 @@ assign [class="Deluge" window_type="normal"] $ws4
 assign [class="mpv"] $ws5
 assign [class="Steam" title="Steam"] $ws6
 assign [class="discord"] $ws7
-assign [app_id="telegramdesktop"] $ws5
+assign [app_id=".+Kotatogram_Desktop"] $ws5
 for_window [class="Spotify"] move to workspace $ws10
 
 # vim: set ft=i3config:
@@ -316,7 +316,7 @@ bindsym --to-code {
     $mod+Return exec alacritty
     $mod+Tab exec pcmanfm-qt
     $mod+a exec firefox
-    $mod+t exec telegram-desktop
+    $mod+t exec kotatogram-desktop
     $mod+o gaps outer current set $outer; gaps inner current set $inner
     $mod+i gaps outer current set 0; gaps inner current set 0
     XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
