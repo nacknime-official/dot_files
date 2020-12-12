@@ -154,6 +154,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
 Plug 'wsdjeg/vim-todo'
+
+Plug 'mhinz/vim-startify'
 call plug#end()
 " end plugins }}}
 
@@ -606,3 +608,22 @@ autocmd OptionSet background
 " limelight
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
+" startify
+let g:startify_lists = [
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ { 'type': 'files',     'header': ['   Files']            },
+          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
+          \ ]
+let g:startify_bookmarks = [
+            \ { 'i': '~/.dotfiles/init.vim' },
+            \ { 'sw': '~/.dotfiles/sway/config' },
+            \ { 'z': '~/.zshrc' },
+            \ '~/python_projects/my',
+            \ ]
+let g:startify_session_autoload = 1
+let g:startify_change_to_vcs_root = 1
+let g:startify_session_persistence = 1
+let g:startify_enable_special = 0
+let g:startify_session_sort = 1
