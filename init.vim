@@ -156,6 +156,10 @@ Plug 'junegunn/limelight.vim'
 Plug 'wsdjeg/vim-todo'
 
 Plug 'mhinz/vim-startify'
+
+" Bar
+Plug 'romgrk/barbar.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 " end plugins }}}
 
@@ -276,12 +280,27 @@ hi SignColumn ctermbg=none guibg=none
 " save as sudo
 ca w!! w !sudo tee "%"
 
-" tab navigation mappings
+" tab navigation mappings & BarBar settings
 map tt :tabnew 
-map <M-l> :tabn<CR>
-imap <M-l> <ESC>:tabn<CR>
-map <M-h> :tabp<CR>
-imap <M-h> <ESC>:tabp<CR>
+map  <silent> <A-l>         :BufferNext<CR>
+imap <silent> <A-l> <ESC>   :BufferNext<CR>
+map  <silent> <A-h>         :BufferPrevious<CR>
+imap <silent> <A-h> <ESC>   :BufferPrevious<CR>
+
+nnoremap <silent>    <A-1>  :BufferGoto 1<CR>
+nnoremap <silent>    <A-2>  :BufferGoto 2<CR>
+nnoremap <silent>    <A-3>  :BufferGoto 3<CR>
+nnoremap <silent>    <A-4>  :BufferGoto 4<CR>
+nnoremap <silent>    <A-5>  :BufferGoto 5<CR>
+nnoremap <silent>    <A-6>  :BufferGoto 6<CR>
+nnoremap <silent>    <A-7>  :BufferGoto 7<CR>
+nnoremap <silent>    <A-8>  :BufferGoto 8<CR>
+nnoremap <silent>    <A-9>  :BufferLast<CR>
+nnoremap <silent>    <A-c>  :BufferClose<CR>
+
+let bufferline = {}
+let bufferline.auto_hide = v:true
+let bufferline.icons = "both"
 
 " clear search results
 nnoremap <silent> // :noh<CR>
