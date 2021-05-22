@@ -1,22 +1,21 @@
 {
-  "python.jediEnabled": true,
-  "python.jediPath": "/usr/lib/python3.8/site-packages/",
+  "python.analysis.typeCheckingMode": "off",
+  "python.analysis.diagnosticMode": "workspace",
   "python.linting.enabled": true,
   "python.linting.mypyEnabled": true,
   "python.linting.mypyPath": "/usr/bin/mypy",
   "python.linting.pylintEnabled": false,
-  "diagnostic.refreshOnInsertMode": true,
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/usr/bin/black",
-  "python.autoComplete.addBrackets": true,
-  "suggest.noselect": false,
-  "suggest.enablePreview": true,
-  "python.globalModuleInstallation": true,
-  "codeLens.enable": true,
+  "pyright.organizeimports.provider": "isort",
 
   "yaml.format.bracketSpacing": true,
 
+  "suggest.noselect": false,
+  "suggest.enablePreview": true,
   "suggest.maxPreviewWidth": 100,
+  "suggest.defaultSortMethod": "alphabetical",
+  "codeLens.enable": true,
   "diagnostic.checkCurrentLine": true,
   "diagnostic.maxWindowHeight": 20,
   "diagnostic.errorSign": "✖",
@@ -24,34 +23,42 @@
   "diagnostic.infoSign": "●",
   "diagnostic.hintSign": "○",
   "diagnostic.enableSign": true,
+  "diagnostic.refreshOnInsertMode": true,
+  "diagnostic.enableMessage": "never",
+  "diagnostic.showUnused": true,
+  "diagnostic.virtualText": true,
 
   "explorer.icon.enableNerdfont": true,
   "explorer.sources": [
     { "name": "buffer", "expand": true },
     { "name": "file", "expand": true }
   ],
-  "explorer.file.column.git.icon.added": "✚",
-  "explorer.file.column.git.icon.deleted": "✖",
-  "explorer.file.column.git.icon.renamed": "➜",
-  "explorer.file.column.git.icon.unmerged": "═",
-  "explorer.file.column.git.icon.untracked": "?",
-  "explorer.file.column.git.icon.modified": "✹",
-  "explorer.file.column.git.icon.ignored": "☒",
+  "explorer.git.icon.status.added": "✚",
+  "explorer.git.icon.status.deleted": "✖",
+  "explorer.git.icon.status.renamed": "➜",
+  "explorer.git.icon.status.unmerged": "═",
+  "explorer.git.icon.status.untracked": "?",
+  "explorer.git.icon.status.modified": "✹",
+  "explorer.git.icon.status.ignored": "☒",
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", ["expanded?", "collapse", "expand"], "open"]
   },
+  "explorer.filename.colored.enable": false,
   "explorer.width": 30,
+
   "git.addedSign.hlGroup": "SignifySignAdd",
   "git.changedSign.hlGroup": "SignifySignChange",
   "git.removedSign.hlGroup": "SignifySignDelete",
   "git.topRemovedSign.hlGroup": "SignifySignDelete",
+  "git.addGBlameToVirtualText": true,
 
-  "snippets.extends": { "html": ["htmldjango"], "python": ["django"] },
-  "suggest.defaultSortMethod": "alphabetical",
-  "diagnostic.messageDelay": 0,
+  "snippets.extends": { "html": ["htmldjango"], "python": ["django"], "markdown": ["html"] },
+  "snippets.triggerCharacters": ["*"],
+
   "suggest.languageSourcePriority": 100,
   "tabnine.priority": 99,
+
   "eslint.nodePath": "~/.config/yarn/global/node_modules",
   "eslint.options": {
     "useEslintrc": false,
@@ -59,5 +66,9 @@
     "parserOptions": {
       "ecmaVersion": 12
     }
-  }
+  },
+
+  "sql.database": "postgresql",
+
+  "markdownlint.config": {"line-length": false}
 }

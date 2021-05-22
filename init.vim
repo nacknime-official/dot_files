@@ -426,7 +426,6 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 
 let g:coc_global_extensions = [
-    \ 'coc-python',
     \ 'coc-json',
     \ 'coc-tsserver',
     \ 'coc-git',
@@ -438,7 +437,27 @@ let g:coc_global_extensions = [
     \ 'coc-prettier',
     \ 'coc-snippets',
     \ 'coc-explorer',
-    \ 'coc-diagnostic'
+    \ 'coc-diagnostic',
+    \ 'coc-terminal',
+    \ 'coc-tasks',
+    \ 'coc-project',
+    \ 'coc-marketplace',
+    \ 'coc-html',
+    \ 'coc-html-css-support',
+    \ 'coc-gitignore',
+    \ 'coc-gist',
+    \ 'coc-fzf-preview',
+    \ 'coc-emoji',
+    \ 'coc-db',
+    \ 'coc-yaml',
+    \ 'coc-sql',
+    \ 'coc-rust-analyzer',
+    \ 'coc-pyright',
+    \ 'coc-pydocstring',
+    \ 'coc-markdownlint',
+    \ 'coc-go',
+    \ 'coc-docker',
+    \ 'coc-css'
     \ ]
 
 " coc-prettier
