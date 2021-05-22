@@ -163,6 +163,9 @@ Plug 'kyazdani42/nvim-web-devicons'
 
 " CSV support
 Plug 'chrisbra/csv.vim', { 'for': 'csv' }
+
+" Live HTML server
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 call plug#end()
 " end plugins }}}
 
