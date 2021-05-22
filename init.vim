@@ -160,6 +160,9 @@ Plug 'mhinz/vim-startify'
 " Bar
 Plug 'romgrk/barbar.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+
+" CSV support
+Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 call plug#end()
 " end plugins }}}
 
