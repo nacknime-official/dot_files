@@ -72,13 +72,11 @@
         "format-alt": "{icon} {capacity}% {time}",
         "format-alt-click": "click-right",
         "format-icons": ["", "", "", "", ""],
-        "format-charging": "",
-        "interval": 30,
+        "format-charging": "{capacity}%",
         "states": {
             "warning": 25,
             "critical": 10
         },
-        "tooltip": false
     },
     "network": {
         "format": "{icon}",
