@@ -43,7 +43,7 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Class/module browser
-Plug 'majutsushi/tagbar'
+Plug 'preservim/tagbar'
 
 " Search results counter
 "Plug 'vim-scripts/IndexedSearch'
@@ -316,6 +316,7 @@ au FileType python map <silent> <leader>b Oimport ipdb; ipdb.set_trace()<esc>
 map <F4> :TagbarToggle<CR>
 " autofocus on tagbar open
 let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
 
 " CocExplorer -----------------------------
 
