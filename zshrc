@@ -132,10 +132,10 @@ bindkey -M emacs '^N' history-substring-search-down
 
 HISTORY_SUBSTRING_SEARCH_FUZZY='1'
 
-alias ls='lsd'
-alias l='ls -l'
+alias ls='exa --icons'
+alias l='ls -lg'
 alias la='ls -a'
-alias lla='ls -la'
+alias lla='ls -lga'
 alias lt='ls --tree'
 
 alias r='ranger'
