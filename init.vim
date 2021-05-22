@@ -166,6 +166,10 @@ Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 
 " Live HTML server
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+
+" AsyncTasks
+Plug 'skywind3000/asynctasks.vim'
+Plug 'skywind3000/asyncrun.vim' | let g:asyncrun_open = 6
 call plug#end()
 " end plugins }}}
 
@@ -672,3 +676,11 @@ let g:startify_change_to_vcs_root = 1
 let g:startify_session_persistence = 1
 let g:startify_enable_special = 0
 let g:startify_session_sort = 1
+" AsyncTasks
+let g:asynctasks_term_listed = 0
+let g:asynctasks_term_hidden = 1
+let g:asynctasks_term_pos = 'bottom'
+"let g:asynctasks_term_focus = 0
+let g:asynctasks_term_rows = 10
+noremap <silent><F7> :AsyncTask file-run<cr>
+noremap <silent><F8> :AsyncTask project-run<cr>
