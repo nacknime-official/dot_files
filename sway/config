@@ -173,6 +173,7 @@ exec_always wl-paste -t text --watch clipman store
 exec_always swaykbdd
 exec ~/.config/sway/scripts/spotify.sh https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM
 exec_always /usr/bin/ydotoold
+exec_always blueman-applet
 
 #---------------#
 # SPECIAL CASES #
@@ -326,8 +327,8 @@ bindsym --to-code {
     XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
     XF86AudioMute exec pactl set-sink-mute 0 toggle
     XF86AudioPlay exec playerctl play-pause
-    XF86MonBrightnessUp exec light -A 10
-    XF86MonBrightnessDown exec light -U 10
+    XF86AudioNext exec playerctl next
+    XF86AudioPrev exec playerctl previous
     $mod+Shift+r reload
 
     $mod+grave exec dunstctl close
