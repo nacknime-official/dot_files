@@ -255,6 +255,8 @@ set conceallevel=2
 set mouse=a
 set updatetime=300
 set signcolumn=yes
+
+set sessionoptions-=blank " fix blank coc-explorer windows after reopening session
 " switch cursor to line when in insert mode, and block when not
 
 " enable 24 bit color support if supported
