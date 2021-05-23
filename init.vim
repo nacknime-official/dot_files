@@ -647,7 +647,9 @@ let g:indentLine_enabled = 1
 let g:indentLine_setConceal = 0
 
 " Markdown
-let g:mkdp_auto_start = 1
+autocmd FileType markdown let b:surround_{char2nr('i')} = "*\r*"
+autocmd FileType markdown let b:surround_{char2nr('b')} = "**\r**"
+
 
 " switch background of the solarized colorscheme
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
