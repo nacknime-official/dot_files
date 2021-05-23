@@ -171,6 +171,7 @@ exec_always pcmanfm-qt -d
 exec_always nextcloud
 exec wl-paste -t text --watch clipman store
 exec_always ~/.config/sway/scripts/auto_switch_kbd.py --kb-id=1:1:AT_Translated_Set_2_keyboard
+exec ~/.config/sway/scripts/spotify.sh https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM
 exec_always /usr/bin/ydotoold
 
 #---------------#
