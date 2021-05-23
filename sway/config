@@ -154,7 +154,7 @@ exec safeeyes &
 exec_always autotiling
 #exec_always bash ~/.config/polybar/launch.sh
 #exec_always dunst
-exec_always mako
+exec_always dunst
 exec_always kotatogram-desktop -startintray
 #exec_always killall compton; compton --config ~/.config/compton/compton.conf &
 #exec_always killall conky; conky &
@@ -330,8 +330,9 @@ bindsym --to-code {
     XF86MonBrightnessDown exec light -U 10
     $mod+Shift+r reload
 
-    $mod+grave exec makoctl dismiss
-    $mod+$alt+grave exec makoctl dismiss -a
+    $mod+grave exec dunstctl close
+    $mod+$alt+grave exec dunstctl close-all
+    ctrl+grave exec dunstctl history-pop
 
     $mod+$alt+l exec swaylock 
 }
