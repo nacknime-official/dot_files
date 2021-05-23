@@ -268,13 +268,9 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 " remove ugly vertical lines on window division
 "set fillchars+=vert:\ 
 
-" russian keymap
-"set keymap+=ukrainian-jcukenwin
-"set keymap=russian-jcukenwin
-"set iminsert=0
-"set imsearch=0
-imap <M-Space> <C-^>
-nmap <F12> <C-^>
+" keyboard layout switcher (for Sway, depends on a system)
+au InsertLeave * let lastLangIndex=system('swaymsg -t get_inputs | grep -m1 "xkb_active_layout_index" | grep -oP "\d+"') | call jobstart('swaymsg input "* xkb_switch_layout 0"')
+au InsertEnter * :if exists("lastLangIndex") | call jobstart('swaymsg input "* xkb_switch_layout ' . lastLangIndex . '"') | endif
 
 " colorscheme {{{
 let g:gruvbox_bold = 0
