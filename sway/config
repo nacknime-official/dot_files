@@ -174,6 +174,7 @@ exec_always swaykbdd
 exec ~/.config/sway/scripts/spotify.sh https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM
 exec_always /usr/bin/ydotoold
 exec_always blueman-applet
+exec mkfifo $SWAYSOCK.wob && tail -f $SWAYSOCK.wob | wob -a bottom -M 300
 
 #---------------#
 # SPECIAL CASES #
@@ -323,12 +324,14 @@ bindsym --to-code {
     $mod+t exec kotatogram-desktop
     $mod+o gaps outer current set $outer; gaps inner current set $inner
     $mod+i gaps outer current set 0; gaps inner current set 0
-    XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
-    XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
-    XF86AudioMute exec pactl set-sink-mute 0 toggle
+    XF86AudioRaiseVolume exec pamixer --allow-boost -ui 5 && pamixer --get-volume > $SWAYSOCK.wob
+    XF86AudioLowerVolume exec pamixer --allow-boost -ud 5 && pamixer --get-volume > $SWAYSOCK.wob
+    XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.wob ) || pamixer --get-volume > $SWAYSOCK.wob
     XF86AudioPlay exec playerctl play-pause
     XF86AudioNext exec playerctl next
     XF86AudioPrev exec playerctl previous
+    XF86MonBrightnessUp exec light -A 10 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
+    XF86MonBrightnessDown exec light -U 10 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
     $mod+Shift+r reload
 
     $mod+grave exec dunstctl close
