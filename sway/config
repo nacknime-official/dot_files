@@ -130,11 +130,11 @@ default_border pixel 2
 include "$HOME/.cache/wal/colors-sway"
 
 # class                 border          background      text         indicator         child_border
-client.focused          $color2         $color2         $foreground  $color2           $color2
+client.focused          $color2         $background     $foreground  $color2           $color2
 client.focused_inactive $background     $background     $foreground  $background       $background
 client.unfocused        $background     $background     $foreground  $background       $background
-client.urgent           $color2         $color2         $foreground  $color2           $color2
-client.placeholder      $color2         $color2         $foreground  $color2           $color2
+client.urgent           $color2         $background     $foreground  $color2           $color2
+client.placeholder      $color2         $background     $foreground  $color2           $color2
 
 client.background       $color2
 

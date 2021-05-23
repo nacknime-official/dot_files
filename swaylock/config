@@ -1,4 +1,5 @@
 # vim ft:conf
 
 daemonize
-image=~/.config/sway/nord_blur.jpg
+font=Cantarell
+image=~/.config/sway/gruvbox_blur.jpg

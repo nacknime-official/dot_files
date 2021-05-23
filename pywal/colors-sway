@@ -1,0 +1,21 @@
+set $wallpaper gruvbox.png
+
+set $background #282828
+set $foreground #a89984
+
+set $color0 #282828
+set $color1 #cc241d
+set $color2 #d79921
+set $color3 #b58900
+set $color4 #458588
+set $color5 #b16286
+set $color6 #689d6a
+set $color7 #a89984
+set $color8 #928374
+set $color9 #cc241d
+set $color10 #d79921
+set $color11 #b58900
+set $color12 #458588
+set $color13 #b16286
+set $color14 #689d6a
+set $color15 #a89984

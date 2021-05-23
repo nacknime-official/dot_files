@@ -37,6 +37,9 @@
     ~/.config/mpv: mpv/
     ~/.config/gtk-3.0: gtk-3.0/
     ~/.config/nvim/plugged/vimspector/configurations: vimspector/configurations/
+    ~/.cache/wal/colors-rofi-dark.rasi: pywal/colors-rofi-dark.rasi
+    ~/.cache/wal/colors-sway: pywal/colors-sway
+    ~/.cache/wal/colors-waybar.css: pywal/colors-waybar.css
 
 
 
