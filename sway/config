@@ -155,7 +155,7 @@ exec_always autotiling
 #exec_always bash ~/.config/polybar/launch.sh
 #exec_always dunst
 exec_always dunst
-exec_always kotatogram-desktop -startintray
+exec_always kotatogram-desktop
 #exec_always killall compton; compton --config ~/.config/compton/compton.conf &
 #exec_always killall conky; conky &
 
