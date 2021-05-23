@@ -251,6 +251,10 @@ set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 
 set concealcursor=c " disable concealing when cursor on the line
 set conceallevel=2
+
+set mouse=a
+set updatetime=300
+set signcolumn=yes
 " switch cursor to line when in insert mode, and block when not
 
 " enable 24 bit color support if supported
