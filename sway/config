@@ -247,7 +247,7 @@ input "1267:32:Elan_Touchpad" {
     middle_emulation enabled
 }
 
-input * xkb_layout "us,ru"
+input * xkb_layout "us,ru,ua"
 input * xkb_options "grp:caps_toggle, shift:both_capslock"
 input * repeat_delay 200
 
