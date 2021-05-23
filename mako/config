@@ -4,8 +4,9 @@ text-color=#cccccc
 
 width=600
 height=300
-border-color=#66cc99
+border-color=#667986
 border-radius=3
 layer=overlay
+default-timeout=7000
 
 # vim: ft=cfg
