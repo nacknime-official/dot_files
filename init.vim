@@ -632,7 +632,7 @@ autocmd FileType yaml setlocal ts=4 sts=4 sw=4
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
 "Terminal
-tnoremap <Esc> <C-\><C-n>
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 tnoremap <C-j> <C-\><C-N><C-w>j
 tnoremap <C-k> <C-\><C-N><C-w>k
 
