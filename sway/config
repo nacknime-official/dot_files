@@ -165,7 +165,7 @@ exec_always /usr/bin/lxqt-policykit-agent
 #exec wg-quick up wg0-client.conf &
 exec_always /usr/lib/kdeconnectd
 #exec xcalib -v '/home/soul/Acer Swift 3 SF315-41.icm' &
-exec redshift &
+exec gammastep-indicator &
 exec_always libinput-gestures
 exec pcmanfm-qt -d &
 exec nextcloud &
