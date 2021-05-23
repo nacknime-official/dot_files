@@ -344,3 +344,5 @@ bindsym --to-code {
 
 # set cursor theme
 seat seat0 xcursor_theme Breeze_Snow 24
+
+include /etc/sway/config.d/*
