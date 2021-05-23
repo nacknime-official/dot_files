@@ -145,7 +145,7 @@ client.background       $color2
 exec_always swayidle -w timeout 300 'swaylock' timeout 360 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' timeout 660 'systemctl suspend' before-sleep 'swaylock'
 #exec_always xrandr --dpi 120
 #exec_always ~/stretchly/stretchly
-exec_always safeeyes
+exec safeeyes &
 # Keyboard layout
 #exec_always setxkbmap -layout us,ru && setxkbmap -option 'grp:alt_shift_toggle' &
 
@@ -163,13 +163,13 @@ exec_always /usr/bin/lxqt-policykit-agent
 #exec udiskie &
 #exec nextcloud --background &
 #exec wg-quick up wg0-client.conf &
-exec /usr/lib/kdeconnectd &
+exec_always /usr/lib/kdeconnectd
 #exec xcalib -v '/home/soul/Acer Swift 3 SF315-41.icm' &
 exec redshift &
 exec_always libinput-gestures
-exec_always pcmanfm-qt -d
-exec_always nextcloud
-exec wl-paste -t text --watch clipman store
+exec pcmanfm-qt -d &
+exec nextcloud &
+exec_always wl-paste -t text --watch clipman store
 exec_always ~/.config/sway/scripts/auto_switch_kbd.py --kb-id=1:1:AT_Translated_Set_2_keyboard
 exec ~/.config/sway/scripts/spotify.sh https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM
 exec_always /usr/bin/ydotoold
