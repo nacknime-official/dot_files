@@ -690,6 +690,8 @@ let g:startify_change_to_vcs_root = 1
 let g:startify_session_persistence = 1
 let g:startify_enable_special = 0
 let g:startify_session_sort = 1
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " AsyncTasks
 let g:asynctasks_term_listed = 0
 let g:asynctasks_term_hidden = 1
