@@ -170,6 +170,10 @@ Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 " AsyncTasks
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim' | let g:asyncrun_open = 6
+
+" Database manager with autocomplete (coc-db)
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
 call plug#end()
 " end plugins }}}
 
