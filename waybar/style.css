@@ -27,7 +27,7 @@ window#waybar.hidden {
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 0px;     /*only for Gruvbox-Material-Dark*/
     background-color: transparent;
     color: @background;
     border-bottom: 3px solid transparent;
