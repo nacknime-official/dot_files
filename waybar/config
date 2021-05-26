@@ -29,8 +29,9 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "",
+            "deactivated": ""
+
         },
         "tooltip": false
     },
@@ -91,16 +92,19 @@
         "tooltip": false
     },
     "pulseaudio": {
-        "format": "{icon}",
-        "format-alt": "{icon} {volume}%",
-        "format-alt-click": "click-right",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
         "format-muted": "",
         "format-icons": {
-            "phone": [" ", " ", " "],
+            "headphone": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol",
-        "tooltip": false
+        "on-click": "pavucontrol"
+
     },
     "custom/media": {
         "format": "{icon} {}",
