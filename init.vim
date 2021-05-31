@@ -707,3 +707,7 @@ let g:asynctasks_term_pos = 'bottom'
 let g:asynctasks_term_rows = 10
 noremap <silent><F7> :AsyncTask file-run<cr>
 noremap <silent><F8> :AsyncTask project-run<cr>
+
+" remove opened and closed terminals out of barbar
+" (vimspector windows, coc-terminal etc.)
+autocmd TermOpen * setlocal nobuflisted
