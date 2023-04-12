@@ -84,6 +84,10 @@ return require('packer').startup(function(use)
   use('vim-test/vim-test')
   use("tpope/vim-surround")
   use("Darazaki/indent-o-matic")
+  use {
+    'ruifm/gitlinker.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+  }
 
 end)
 
