@@ -21,8 +21,7 @@
     ~/.config/termite: termite/
     ~/.config/sway: sway/
     ~/.config/waybar: waybar/
-    ~/.config/nvim/init.vim: init.vim
-    ~/.config/nvim/coc-settings.json: coc-settings.json
+    ~/.config/nvim: nvim/
     ~/.config/rofi: rofi/
     ~/.config/dunst: dunst/
     ~/.config/polybar: polybar/
