@@ -182,7 +182,7 @@ exec_always /usr/bin/ydotoold
 exec_always blueman-applet
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
-exec_always alacritty --class=kata-algo -e "zsh" "-c" "lvim ~/algorithms/kata-machine"
+exec_always alacritty --class=kata-algo -e "zsh" "-c" "nvim ~/algorithms/kata-machine"
 
 #---------------#
 # SPECIAL CASES #
