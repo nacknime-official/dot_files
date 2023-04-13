@@ -363,7 +363,7 @@ bindsym --to-code {
     # ctrl+grave exec dunstctl history-pop
     $mod+n exec swaync-client -t -sw
 
-    $mod+$alt+l exec swaylock 
+    $mod+$alt+l exec swaylock
 
     $mod+u exec killall -SIGUSR1 waybar
 }
