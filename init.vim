@@ -1,13 +1,5 @@
-" Fisa-nvim-config
-" http://nvim.fisadev.com
-" version: 11.1
-
-" TODO current problems:
-" * end key not working undef tmux+fish
-
 " ============================================================================
 " Vim-plug initialization
-" Avoid modifying this section, unless you are very sure of what you are doing
 
 " vim-plug init {{{
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
@@ -25,56 +17,23 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'haorenW1025/completion-nvim'
 "Plug 'haorenW1025/diagnostic-nvim'
 "Plug 'steelsojka/completion-buffers'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'Shougo/deoplete-lsp'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-"Plug 'fatih/vim-go', {'for': 'go'}
-
-" Override configs by directory
-"Plug 'arielrossanigo/dir-configs-override.vim'
 
 " Code commenter
 Plug 'scrooloose/nerdcommenter'
 
-" Better file browser
-"Plug 'scrooloose/nerdtree'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'ryanoasis/vim-devicons'
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 " Class/module browser
 Plug 'preservim/tagbar'
 
-" Search results counter
-"Plug 'vim-scripts/IndexedSearch'
-
-" Terminal Vim with 256 colors colorscheme
-"Plug 'fisadev/fisa-vim-colorscheme'
-
-" Airline
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+" Lightline
 Plug 'itchyny/lightline.vim'
 
-" Code and files fuzzy finder
-" Plug 'ctrlpvim/ctrlp.vim'
-" Extension to ctrlp, for fuzzy command finder
-" Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Pending tasks list
 "Plug 'fisadev/FixedTaskList.vim'
-
-" Async autocompletion
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Completion from other opened files
-"Plug 'Shougo/context_filetype.vim'
-" Python autocompletion
-"Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
-" Just to add the python go-to-definition and similar features, autocompletion
-" from this plugin is disabled
-"Plug 'davidhalter/jedi-vim'
 
 " Automatically close parenthesis, etc
 Plug 'jiangmiao/auto-pairs'
@@ -90,47 +49,18 @@ Plug 'Yggdroot/indentLine'
 
 " Better language packs
 "Plug 'sheerun/vim-polyglot'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'commit': '6d504dd0f866d7c7337025f8f27b1d84a993b4a3'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 "Plug 'romgrk/nvim-treesitter-context'
-" Ack code search (requires ack installed in the system)
-"Plug 'mileszs/ack.vim'
 
 " Paint css colors with the real color
 Plug 'norcalli/nvim-colorizer.lua'
-
-" Window chooser
-"Plug 't9md/vim-choosewin'
-
-" Highlight matching html tags
-"Plug 'valloric/MatchTagAlways'
 
 " Generate html in a simple way
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 
 " Git integration
 Plug 'tpope/vim-fugitive'
-
-" Git/mercurial/others diff icons on the side of the file lines
-"Plug 'mhinz/vim-signify'
-
-" Yank history navigation
-"Plug 'vim-scripts/YankRing.vim'
-
-" Linters
-"Plug 'neomake/neomake'
-"Plug 'Chiel92/vim-autoformat'
-" TODO is it running on save? or when?
-" TODO not detecting errors, just style, is it using pylint?
-
-" Relative numbering of lines (0 is the current line)
-" (disabled by default because is very intrusive and can't be easily toggled
-" on/off. When the plugin is present, will always activate the relative
-" numbering every time you go to normal mode. Author refuses to add a setting
-" to avoid that)
-"Plug 'myusuf3/numbers.vim'
-
-" Nice icons
-" Plug 'ryanoasis/vim-devicons'
 
 Plug 'vim-scripts/argtextobj.vim'
 
@@ -144,6 +74,7 @@ Plug 'tpope/vim-obsession'
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': 'markdown' }
+Plug 'ferrine/md-img-paste.vim'
 
 " Python folding
 Plug 'Konfekt/FastFold'
@@ -155,7 +86,9 @@ Plug 'junegunn/limelight.vim'
 
 Plug 'wsdjeg/vim-todo'
 
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
+"Plug 'glepnir/dashboard-nvim'
+Plug 'goolord/alpha-nvim'
 
 " Bar
 Plug 'romgrk/barbar.nvim'
@@ -174,6 +107,30 @@ Plug 'skywind3000/asyncrun.vim' | let g:asyncrun_open = 6
 " Database manager with autocomplete (coc-db)
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
+
+Plug 'jdhao/better-escape.vim'
+
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'fannheyward/telescope-coc.nvim'
+
+Plug 'folke/todo-comments.nvim'
+Plug 'folke/trouble.nvim'
+
+"Plug 'chaoren/vim-wordmotion'
+Plug 'lifepillar/vim-colortemplate'
+Plug 'kyazdani42/nvim-tree.lua'
+
+Plug 'Vimjas/vim-python-pep8-indent'
+
+Plug 'wakatime/vim-wakatime'
+
+Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
+Plug 'nvim-telescope/telescope-project.nvim'
+Plug 'rmagatti/auto-session'
+Plug 'rmagatti/session-lens'
+Plug 'folke/tokyonight.nvim'
 call plug#end()
 " end plugins }}}
 
@@ -183,20 +140,60 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = "python",
   highlight = {
    enable = true,
-    use_languagetree = true,
+    -- use_languagetree = true,
   },
   indent = {
-    enable = true,
+    enable = false,
   },
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = "gnn",
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
+  textobjects = {
+    select = {
+      enable = true,
+
+      -- Automatically jump forward to textobj, similar to targets.vim 
+      lookahead = true,
+
+      keymaps = {
+        -- You can use the capture groups defined in textobjects.scm
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        ["ic"] = "@class.inner",
+
+        -- Or you can define your own textobjects like this
+        ["iF"] = {
+          python = "(function_definition) @function",
+          cpp = "(function_definition) @function",
+          c = "(function_definition) @function",
+          java = "(method_declaration) @function",
+        },
+      },
     },
   },
+}
+require("todo-comments").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+}
+require("trouble").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+}
+require('telescope').load_extension('coc')
+--require('telescope').load_extension('sessions')
+require("telescope").load_extension("session-lens")
+require('telescope').load_extension('project')
+
+local actions = require('telescope.actions')
+require('telescope').setup{
+  defaults = {
+    mappings = {
+      i = {
+        ["<esc>"] = actions.close
+      },
+    },
+  }
 }
 EOF
 
@@ -225,6 +222,7 @@ set scrolloff=7
 "set foldmethod=marker foldlevel=0
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
+set foldlevel=99
 set hidden
 set autoread " detect when a file is changed
 set smartcase " case-sensitive if expresson contains a capital letter
@@ -256,6 +254,7 @@ set mouse=a
 set updatetime=300
 set signcolumn=yes
 
+set sessionoptions+=options,resize,winpos,terminal
 set sessionoptions-=blank " fix blank coc-explorer windows after reopening session
 " switch cursor to line when in insert mode, and block when not
 
@@ -302,6 +301,10 @@ map  <silent> <A-l>         :BufferNext<CR>
 imap <silent> <A-l> <ESC>   :BufferNext<CR>
 map  <silent> <A-h>         :BufferPrevious<CR>
 imap <silent> <A-h> <ESC>   :BufferPrevious<CR>
+map  <silent> <A-S-h>       :BufferMovePrevious<CR>
+map  <silent> <A-S-l>       :BufferMoveNext<CR>
+imap  <silent> <A-S-h> <ESC>      :BufferMovePrevious<CR> i
+imap  <silent> <A-S-l> <ESC>      :BufferMoveNext<CR> i
 
 nnoremap <silent>    <A-1>  :BufferGoto 1<CR>
 nnoremap <silent>    <A-2>  :BufferGoto 2<CR>
@@ -335,11 +338,21 @@ nnoremap <leader>i :set cursorline!<cr>
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
+" moving between windows easier
+map <silent> <C-h> <C-w>h
+map <silent> <C-j> <C-w>j
+map <silent> <C-k> <C-w>k
+map <silent> <C-l> <C-w>l
+
+nmap <silent> <C-Up> :resize -2<CR>
+nmap <silent> <C-Down> :resize +2<CR>
+nmap <silent> <C-Left> :vertical resize -2<CR>
+nmap <silent> <C-Right> :vertical resize +2<CR>
 " height of the complete window
 set pumheight=15
 " Ability to add python breakpoints
 " (I use ipdb, but you can change it to whatever tool you use for debugging)
-au FileType python map <silent> <leader>b O__import__("ipdb").set_trace()<esc>
+au FileType python nnoremap <silent><nowait> <leader>b O__import__("ipdb").set_trace()<esc>
 
 " ============================================================================
 " Plugins settings and mappings
@@ -366,13 +379,26 @@ let g:lightline = {
     \ 'colorscheme': 'gruvbox8',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'git', 'diagnostic', 'cocstatus', 'readonly', 'filename', 'modified' ] ],
+    \             [ 'git', 'diagnostic', 'readonly', 'filename', 'modified' ] ],
     \   'right': [ [ 'lineinfo' ], [ 'percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
     \ },
     \
     \ 'component_function': {
     \   'cocstatus': 'coc#status'
     \ },
+    \ 'mode_map': {
+        \ 'n' : 'N',
+        \ 'i' : 'I',
+        \ 'R' : 'R',
+        \ 'v' : 'V',
+        \ 'V' : 'VL',
+        \ "\<C-v>": 'VB',
+        \ 'c' : 'C',
+        \ 's' : 'S',
+        \ 'S' : 'SL',
+        \ "\<C-s>": 'SB',
+        \ 't': 'T',
+        \ },
     \ }
 
 
@@ -426,30 +452,6 @@ highlight SignifySignAdd    ctermfg=114 guifg=#98C379
 highlight SignifySignDelete ctermfg=180 guifg=#E5C07B
 highlight SignifySignChange ctermfg=204 guifg=#E06C75
 
-" Autoclose ------------------------------
-
-" Fix to let ESC work as espected with Autoclose plugin
-" (without this, when showing an autocompletion window, ESC won't leave insert
-"  mode)
-"let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
-
-" Yankring -------------------------------
-
-" Fix for yankring and neovim problem when system has non-text things copied
-" in clipboard
-"let g:yankring_clipboard_monitor = 0
-"let g:yankring_history_dir = '~/.config/nvim/'
-
-"-------------------------------------------
-" Golang Settings
-"-------------------------------------------
-" disable vim-go :GoDef short cut (gd)
-" this is handled by LanguageClient [LC]
-"let g:go_def_mapping_enabled = 0
-
-"let g:go_list_type = "quickfix"
-"let g:go_list_autoclose = 1
-
 " move lines
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
@@ -493,13 +495,17 @@ let g:coc_global_extensions = [
     \ 'coc-markdownlint',
     \ 'coc-go',
     \ 'coc-docker',
-    \ 'coc-css'
+    \ 'coc-css',
+    \ 'coc-yank',
+    \ 'coc-go',
     \ ]
 
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <leader>f :CocCommand prettier.formatFile<cr>
-nmap <F2> :call CocActionAsync('format')<CR>
+command! -nargs=0 AsyncFormat :call CocActionAsync('format')
+nmap <F2> :AsyncFormat<CR>
+"au InsertLeave *.py execute("AsyncFormat")
 
 " coc-git
 nmap [g <Plug>(coc-git-prevchunk)
@@ -526,7 +532,10 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+if exists('*complete_info')
+  inoremap <silent><expr> <cr> complete_info(['selected'])['selected'] != -1 ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 nmap <silent> K :call <SID>show_documentation()<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -539,14 +548,14 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
+"xmap if <Plug>(coc-funcobj-i)
+"omap if <Plug>(coc-funcobj-i)
+"xmap af <Plug>(coc-funcobj-a)
+"omap af <Plug>(coc-funcobj-a)
+"xmap ic <Plug>(coc-classobj-i)
+"omap ic <Plug>(coc-classobj-i)
+"xmap ac <Plug>(coc-classobj-a)
+"omap ac <Plug>(coc-classobj-a)
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -576,6 +585,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+" coc-yank
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-line)
@@ -628,18 +639,27 @@ function! WordCount()
     endif
 endfunction
 
+"filetype on
+"filetype plugin on
+"filetype indent on
+
 "yaml tabstop 4
 autocmd FileType yaml setlocal ts=4 sts=4 sw=4
 "js tabstop 2
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType javascript,vue setlocal ts=2 sts=2 sw=2
+"golang
+autocmd FileType go setlocal noexpandtab
 
 "Terminal
 tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 tnoremap <C-j> <C-\><C-N><C-w>j
 tnoremap <C-k> <C-\><C-N><C-w>k
+tnoremap <C-h> <C-\><C-N><C-w>h
+tnoremap <C-l> <C-\><C-N><C-w>l
+nmap <silent> <space>t  :CocCommand terminal.Toggle<cr>
 
 " Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert
+set completeopt=menuone,noinsert,noselect
 
 " Avoid showing message extra message when using completion
 set shortmess+=c
@@ -647,19 +667,41 @@ set shortmess+=c
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_enabled = 1
 let g:indentLine_setConceal = 0
+let g:indentLine_fileTypeExclude = ['dashboard', 'alpha']
 
 " Markdown
 autocmd FileType markdown let b:surround_{char2nr('i')} = "*\r*"
 autocmd FileType markdown let b:surround_{char2nr('b')} = "**\r**"
+autocmd FileType markdown nmap <buffer><silent> <space>i :call mdip#MarkdownClipboardImage()<CR>
 
 
 " switch background of the solarized colorscheme
-map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+map <space>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 " Lightline change colorscheme on the fly with vim's colorscheme
-autocmd OptionSet background
-      \ execute 'source' globpath(&rtp, 'autoload/lightline/colorscheme/gruvbox.vim')
-      \ | call lightline#colorscheme() | call lightline#update()
+let s:colour_scheme_map = {'gruvbox8_hard': 'gruvbox8'}
+augroup LightLineColorscheme
+  autocmd!
+  autocmd ColorScheme * call s:onColorSchemeChange(expand("<amatch>"))
+augroup END
+function! s:onColorSchemeChange(scheme)
+    " Try a scheme provided already
+    execute 'runtime autoload/lightline/colorscheme/'.a:scheme.'.vim'
+    if exists('g:lightline#colorscheme#{a:scheme}#palette')
+        let g:lightline.colorscheme = a:scheme
+    else  " Try falling back to a known colour scheme
+        let l:colors_name = get(s:colour_scheme_map, a:scheme, '')
+        if empty(l:colors_name)
+            return
+        else
+            echo l:colors_name
+            let g:lightline.colorscheme = l:colors_name
+        endif
+    endif
+    call lightline#init()
+    call lightline#colorscheme()
+    call lightline#update()
+endfunction
 
 "inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", '\<C-y>')
 "call ncm2#override_source('LanguageClient_python', {'enable': 0})
@@ -682,10 +724,11 @@ let g:startify_lists = [
           \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
           \ ]
 let g:startify_bookmarks = [
+            \ '~/python_projects/my',
+            \ '~/go/src',
             \ { 'i': '~/.dotfiles/init.vim' },
             \ { 'sw': '~/.dotfiles/sway/config' },
             \ { 'z': '~/.zshrc' },
-            \ '~/python_projects/my',
             \ ]
 let g:startify_session_autoload = 1
 let g:startify_change_to_vcs_root = 1
@@ -698,11 +741,14 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " AutoPairs
 au FileType rust let b:AutoPairs = AutoPairsDefine({"<'" : '>'})
+au FileType htmldjango let b:AutoPairs = AutoPairsDefine({'{%' : '%}'})
+au FileType html,htmldjango let b:AutoPairs = AutoPairsDefine({'>' : '<'}, [])
 
 " AsyncTasks
 let g:asynctasks_term_listed = 0
 let g:asynctasks_term_hidden = 1
 let g:asynctasks_term_pos = 'bottom'
+let g:asynctasks_term_reuse = 0
 "let g:asynctasks_term_focus = 0
 let g:asynctasks_term_rows = 10
 noremap <silent><F7> :AsyncTask file-run<cr>
@@ -710,4 +756,193 @@ noremap <silent><F8> :AsyncTask project-run<cr>
 
 " remove opened and closed terminals out of barbar
 " (vimspector windows, coc-terminal etc.)
-autocmd TermOpen * setlocal nobuflisted
+au TermOpen * setlocal nobuflisted | setlocal winfixheight | setlocal nowinfixwidth
+au FileType alpha set nobuflisted
+au BufLeave * call CleanNoNameEmptyBuffers()
+au WinNew * setlocal winfixwidth
+"au FileType coc-explorer setlocal winfixwidth
+"au FileType dbui setlocal winfixwidth
+function! CleanNoNameEmptyBuffers()
+    let buffers = filter(range(1, bufnr('$')), 'buflisted(v:val) && empty(bufname(v:val)) && bufwinnr(v:val) < 0 && (getbufline(v:val, 1, "$") == [""])')
+    if !empty(buffers)
+        exe 'bd '.join(buffers, ' ')
+    endif
+endfunction
+" better escape
+let g:better_escape_interval = 100
+let g:better_escape_shortcut = ['jk', 'jj', 'kj', 'ло', 'ол', 'оо']
+
+" DBUI
+nmap <silent> <space>d  :DBUIToggle<cr>
+
+" NvimTree
+let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard', 'alpha' ] "empty by default, don't auto open tree on specific filetypes.
+"let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
+let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
+"let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
+let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
+let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
+let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names
+let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
+let g:nvim_tree_disable_window_picker = 1 "0 by default, will disable the window picker.
+let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
+let g:nvim_tree_window_picker_exclude = {
+    \   'filetype': [
+    \     'packer',
+    \     'qf'
+    \   ],
+    \   'buftype': [
+    \     'terminal'
+    \   ]
+    \ }
+" Dictionary of buffer option names mapped to a list of option values that
+" indicates to the window picker that the buffer's window should not be
+" selectable.
+let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
+"If 0, do not show the icons for one of 'git' 'folder' and 'files'
+"1 by default, notice that if 'files' is 1, it will only display
+"if nvim-web-devicons is installed and on your runtimepath.
+"if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
+"but this will not work when you set indent_markers (because of UI conflict)
+
+" default will show icon by default if no icon is provided
+" default shows no icon by default
+let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
+    \ 'git': {
+    \   'unstaged': "✗",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "➜",
+    \   'untracked': "★",
+    \   'deleted': "",
+    \   'ignored': "◌"
+    \   },
+    \ 'folder': {
+    \   'arrow_open': "",
+    \   'arrow_closed': "",
+    \   'default': "",
+    \   'open': "",
+    \   'empty': "",
+    \   'empty_open': "",
+    \   'symlink': "",
+    \   'symlink_open': "",
+    \   },
+    \   'lsp': {
+    \     'hint': "",
+    \     'info': "",
+    \     'warning': "",
+    \     'error': "",
+    \   }
+    \ }
+
+nnoremap <C-n> :NvimTreeToggle<CR>
+"nnoremap <leader>r :NvimTreeRefresh<CR>
+"nnoremap <leader>n :NvimTreeFindFile<CR>
+" NvimTreeOpen and NvimTreeClose are also available if you need them
+
+" a list of groups can be found at `:help nvim_tree_highlight`
+highlight NvimTreeFolderIcon guibg=blue
+
+lua << EOF
+require'nvim-tree'.setup {
+  disable_netrw       = true,
+  hijack_netrw        = true,
+  open_on_setup       = true,
+  ignore_ft_on_setup  = {},
+  auto_close          = false,
+  open_on_tab         = false,
+  hijack_cursor       = true,
+  update_cwd          = true,
+  update_to_buf_dir   = {
+    enable = false,
+    auto_open = false,
+  },
+  diagnostics = {
+    enable = false,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    }
+  },
+  update_focused_file = {
+    enable      = true,
+    update_cwd  = true,
+    ignore_list = {}
+  },
+  system_open = {
+    cmd  = nil,
+    args = {}
+  },
+  filters = {
+    dotfiles = false,
+    custom = {'.git', 'node_modules', '.cache', '__pycache__'}
+  },
+  view = {
+    width = 30,
+    height = 30,
+    hide_root_folder = false,
+    side = 'left',
+    auto_resize = false,
+    mappings = {
+      custom_only = false,
+      list = {}
+    }
+  }
+}
+EOF
+"autocmd VimEnter * bwipeout
+
+" dashboard
+lua << EOF
+    local alpha = require'alpha'
+    local dashboard = require'alpha.themes.dashboard'
+    dashboard.section.buttons.val = {
+        dashboard.button( "e",      "  New file",              ":ene <BAR> startinsert <CR>"),
+        dashboard.button("SPC s  ", "  Sessions",              ":Telescope session-lens search_session<CR>"),
+        dashboard.button("SPC p  ", "  Projects",              ":Telescope project<CR>"),
+        dashboard.button("SPC f f", "  Find file",             ":Telescope find_files<CR>"),
+        dashboard.button("SPC f h", "  Recently opened files", ":Telescope oldfiles<CR>"),
+        dashboard.button("SPC f a", "  Find word",             ":Telescope live_grep<CR>"),
+        dashboard.button("SPC f b", "  Jump to bookmarks",     ":Telescope marks<CR>"),
+        dashboard.button("leader t c", "  Change colorscheme",    ":Telescope colorscheme<CR>"),
+        dashboard.button( "s",      "  Settings",              ":e $MYVIMRC<CR>"),
+        dashboard.button( "u",      "  Update Plugins",        ":PlugUpdate<CR>"),
+        dashboard.button( "q",      "  Quit NVIM",             ":qa<CR>"),
+    }
+    alpha.setup(dashboard.opts)
+EOF
+lua << EOF
+require'alpha'.setup(require'alpha.themes.dashboard'.opts)
+EOF
+let g:dashboard_custom_section={
+\ 'a': {
+    \ 'description': ['  Settings                      SPC e v'],
+    \ 'command': 'edit $MYVIMRC'},
+\ 'c': {
+    \ 'description': ['  Update Plugins                SPC u  '],
+    \ 'command': 'edit $MYVIMRC'},
+\ 'b': {
+    \ 'description': ['  Exit                          SPC q  '],
+    \ 'command': 'edit $MYVIMRC'},
+\ }
+nmap <Leader>ss :<C-u>SaveSession<CR>
+nmap <Leader>sl :<C-u>LoadLastSession<CR>
+nnoremap <silent> <Space>s  :Telescope session-lens search_session<CR>
+nnoremap <silent> <Space>p  :Telescope project<CR>
+nnoremap <silent> <Space>fh :Telescope oldfiles<CR>
+nnoremap <silent> <Space>ff :Telescope find_files<CR>
+nnoremap <silent> <Space>fa :Telescope live_grep<CR>
+nnoremap <silent> <Space>fb :Telescope marks<CR>
+nnoremap <silent> <Leader>tc :Telescope colorscheme<CR>
+
+" session manager
+lua << EOF
+    require('auto-session').setup {
+        auto_save_enabled = true,
+        auto_restore_enabled = true
+    }
+EOF

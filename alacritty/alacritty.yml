@@ -14,6 +14,7 @@ env:
   #TERM: alacritty
 
 window:
+  opacity: 0.8
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -262,7 +263,7 @@ schemes:
         magenta: '#B48EAD'
         cyan:    '#8FBCBB'
         white:   '#ECEFF4'
-  gruvbox: &gruvbox
+  gruvbox_dark: &gruvbox_dark
     # Default colors
     primary:
         # hard contrast: background = '#1d2021'
@@ -291,8 +292,98 @@ schemes:
         magenta: '#d3869b'
         cyan:    '#8ec07c'
         white:   '#ebdbb2'
+  gruvbox_light: &gruvbox_light
+    # Default colors
+    primary:
+        # hard contrast: background = '#f9f5d7'
+        background: '#f2e5bc'
+        # soft contrast: background = '#f2e5bc'
+        foreground: '#3c3836'
 
-colors: *gruvbox
+    # Normal colors
+    normal:
+        black:   '#fbf1c7'
+        red:     '#cc241d'
+        green:   '#98971a'
+        yellow:  '#d79921'
+        blue:    '#458588'
+        magenta: '#b16286'
+        cyan:    '#689d6a'
+        white:   '#7c6f64'
+
+    # Bright colors
+    bright:
+        black:   '#928374'
+        red:     '#9d0006'
+        green:   '#79740e'
+        yellow:  '#b57614'
+        blue:    '#076678'
+        magenta: '#8f3f71'
+        cyan:    '#427b58'
+        white:   '#3c3836'
+
+  new_year: &new_year
+    # Default colors
+    primary:
+        # hard contrast: background = '#1d2021'
+        background: '#010A33'
+        # soft contrast: background = '#32302f'
+        foreground: '#a9c9dd'
+
+    # Normal colors
+    normal:
+        black:   '#010A33'
+        red:     '#486078'
+        green:   '#206696'
+        yellow:  '#53738D'
+        blue:    '#827B99'
+        magenta: '#3D86B4'
+        cyan:    '#638DA8'
+        white:   '#a9c9dd'
+
+    # Bright colors
+    bright:
+        black:   '#768c9a'
+        red:     '#486078'
+        green:   '#206696'
+        yellow:  '#53738D'
+        blue:    '#827B99'
+        magenta: '#3D86B4'
+        cyan:    '#638DA8'
+        white:   '#a9c9dd'
+
+  new_year_x_gruvbox: &new_year_x_gruvbox
+    # Default colors
+    primary:
+        # hard contrast: background = '#1d2021'
+        background: '#010A33'
+        # soft contrast: background = '#32302f'
+        foreground: '#a9c9dd'
+
+    # Normal colors
+    normal:
+        black:   '#282828'
+        red:     '#cc241d'
+        green:   '#98971a'
+        yellow:  '#d79921'
+        blue:    '#458588'
+        magenta: '#b16286'
+        cyan:    '#689d6a'
+        white:   '#a89984'
+
+    # Bright colors
+    bright:
+        black:   '#928374'
+        red:     '#fb4934'
+        green:   '#b8bb26'
+        yellow:  '#fabd2f'
+        blue:    '#83a598'
+        magenta: '#d3869b'
+        cyan:    '#8ec07c'
+        white:   '#ebdbb2'
+
+
+colors: *new_year_x_gruvbox
 
   # Indexed Colors
   #
@@ -334,7 +425,7 @@ colors: *gruvbox
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.8
+# background_opacity: 0.8
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

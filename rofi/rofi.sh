@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 calc() {
-	rofi -show calc -modi calc -calc-command "echo '{result}' | xclip" -lines 12 -width 768
+	rofi -show calc -modi calc -calc-command "echo '{result}' | xclip" -l 12 -width 768
 }
 
 drun() {
-	rofi -show drun -modi drun,window,run -lines 12 -width 1152 -columns 3 -sidebar-mode -show-icons true
+	rofi -show drun -modi drun,window,run -l 12 -width 1152 -columns 3 -sidebar-mode -show-icons true
 }
 
 clip() {
-	clipman pick -t rofi
+    cliphist list | rofi -dmenu | cliphist decode | wl-copy
 }
 
 nm() {
@@ -17,10 +17,10 @@ nm() {
 }
 
 power() {
-	ACTION_LIST="lock\nsuspend\nlogout\nreboot\nshutdown\nsuspend then hibernate"
+	ACTION_LIST="lock\nsuspend\nlogout\nreboot\nshutdown\nhibernate\nsuspend then hibernate"
 
 	_rofi() {
-		rofi -dmenu -i -sync -p "sys" -width 150 -lines 6
+		rofi -dmenu -i -sync -p "sys" -width 150 -l 7
 	}
 
 	SELECTED_STRING=$(echo -e "$ACTION_LIST" | _rofi)
@@ -36,6 +36,45 @@ power() {
 		systemctl poweroff
 	elif [ "$SELECTED_STRING" == "suspend then hibernate" ]; then
 		systemctl suspend-then-hibernate
+	elif [ "$SELECTED_STRING" == "hibernate" ]; then
+		systemctl hibernate
+	fi
+}
+
+light() {
+	ACTION_LIST="toggle\n6500\n4300\n2700\ndisco\nrainbow\nsleep\nsunrise\nsunrise2\nsunset\nstop\ndim\nwarm"
+
+	_rofi() {
+		rofi -dmenu -i -sync -p "light" -width 150 -l 7
+	}
+
+	SELECTED_STRING=$(echo -e "$ACTION_LIST" | _rofi)
+	if [ "$SELECTED_STRING" == "toggle" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-toggle.sh 0
+	elif [ "$SELECTED_STRING" == "6500" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 6500
+	elif [ "$SELECTED_STRING" == "4300" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 4300
+	elif [ "$SELECTED_STRING" == "2700" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 2700
+	elif [ "$SELECTED_STRING" == "disco" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 Disco
+	elif [ "$SELECTED_STRING" == "rainbow" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 Rainbow
+	elif [ "$SELECTED_STRING" == "sleep" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 Sleep
+	elif [ "$SELECTED_STRING" == "sunrise" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 Sunrise
+	elif [ "$SELECTED_STRING" == "sunrise2" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 Sunrise2
+	elif [ "$SELECTED_STRING" == "sunset" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 Sunset
+	elif [ "$SELECTED_STRING" == "stop" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 Stop
+	elif [ "$SELECTED_STRING" == "dim" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 Dim
+	elif [ "$SELECTED_STRING" == "warm" ]; then
+    ~/other_projects/yeelight-shell-scripts/yeelight-scene.sh 0 Warm
 	fi
 }
 
@@ -44,7 +83,7 @@ screenshot() {
 	SCRIPT="$(dirname "$(readlink -f "$0")")"/screenshot.sh
 
 	_rofi() {
-		rofi -dmenu -i -sync -p "screen" -width 175 -lines 6
+		rofi -dmenu -i -sync -p "screen" -width 175 -l 6
 	}
 
 	SELECTED_STRING=$(echo -e "$ACTION_LIST" | _rofi)
@@ -64,7 +103,7 @@ screenshot() {
 }
 
 emoji() {
-	rofimoji --rofi-args "-lines 20 -width 1344 -columns 2"
+	rofimoji --selector-args "-l 20 -width 1344 -columns 2"
 }
 
 usage() {
@@ -85,7 +124,7 @@ if [[ "$1" == "" ]]; then
 	exit 0
 fi
 
-while getopts "cdlnpseh" OPTION; do
+while getopts "cdlnpseyh" OPTION; do
 	case "$OPTION" in
 	c)
 		calc
@@ -107,6 +146,9 @@ while getopts "cdlnpseh" OPTION; do
 		;;
 	e)
 		emoji
+		;;
+	y)
+		light
 		;;
 	h)
 		usage

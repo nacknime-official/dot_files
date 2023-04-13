@@ -150,7 +150,7 @@ bindsym Print exec --no-startup-id  ~/.config/rofi/rofi.sh -s
 bindsym $mod+m exec --no-startup-id ~/.config/rofi/rofi.sh -e
 
 # terminal
-bindsym $mod+Return exec --no-startup-id konsole
+bindsym $mod+Return exec --no-startup-id alacritty
 #bindsym $mod+Shift+Return exec --no-startup-id kitty --title="i3-float"
 
 # File Manager
@@ -165,6 +165,9 @@ bindsym $mod+a exec --no-startup-id firefox
 # Telegram
 bindsym $mod+t exec --no-startup-id telegram-desktop
 
+# close last notification (dunst)
+bindsym $mod+grave exec --no-startup-id dunstctl close
+
 #------#
 # GAPS #
 #------#
@@ -173,8 +176,8 @@ bindsym $mod+t exec --no-startup-id telegram-desktop
 
 set $outer 2
 set $inner 3
-gaps outer $outer
-gaps inner $inner
+#gaps outer $outer
+#gaps inner $inner
 bindsym $mod+o gaps outer current set $outer; gaps inner current set $inner
 bindsym $mod+i gaps outer current set 0; gaps inner current set 0
 
@@ -185,7 +188,7 @@ bindsym $mod+i gaps outer current set 0; gaps inner current set 0
 smart_borders on
 
 # window border
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 set_from_resource $fg i3wm.foreground #f0f0f0
 set_from_resource $bg i3wm.background #f0f0f0
@@ -207,9 +210,9 @@ set_from_resource $cl14 i3wm.color14 #f0f0f0
 set_from_resource $cl15 i3wm.color15 #f0f0f0
 
 # class                 border  backgr. text   indicator child_border
-client.focused          $cl7    $bg     $fg    $fg       $fg
-client.focused_inactive $cl0    $bg     $fg    $bg       $bg
-client.unfocused        $cl0    $bg     $fg    $bg       $bg
+#client.focused          $cl7    $bg     $fg    $fg       $fg
+#client.focused_inactive $cl0    $bg     $fg    $bg       $bg
+#client.unfocused        $cl0    $bg     $fg    $bg       $bg
 client.urgent           $cl13   $bg     $cl13  $bg       $cl13
 client.placeholder      $bg     $bg     $fg    $bg       $fg
 
@@ -219,34 +222,36 @@ client.background       $bg
 # STARTUP APPLICATIONS #
 #----------------------#
 
-exec_always --no-startup-id xrandr --dpi 120
-exec_always --no-startup-id ~/stretchly/stretchly &
+#exec_always --no-startup-id xrandr --dpi 120
+exec_always --no-startup-id safeeyes
 exec --no-startup-id telegram-desktop -startintray &
 # Keyboard layout
-exec_always --no-startup-id setxkbmap -layout us,ru && setxkbmap -option 'grp:alt_shift_toggle' &
+exec_always --no-startup-id setxkbmap -layout us,ru && setxkbmap -option 'grp:caps_toggle, shift:both_capslock' &
+exec_always xset r rate 150 &
 
 exec_always --no-startup-id nitrogen --restore &
 exec_always --no-startup-id xrdb ~/.Xresources &
 exec_always --no-startup-id autotiling
 exec_always bash ~/.config/polybar/launch.sh
 exec_always --no-startup-id killall dunst; dunst -lf "$fg" -nf "$fg" -cf "$fg" -lb "$bg" -nb "$bg" -cb "$bg" -lfr "$lw" -nfr "$cl10" -cfr "$cl13" &
-exec_always --no-startup-id killall compton; compton --config ~/.config/compton/compton.conf &
+exec_always --no-startup-id killall picom; picom
 exec_always --no-startup-id killall conky; conky &
 
-exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 &
+exec --no-startup-id /usr/bin/lxqt-policykit-agent &
 #exec --no-startup-id udiskie &
-#exec --no-startup-id nextcloud --background &
+exec --no-startup-id nextcloud --background &
 #exec --no-startup-id wg-quick up wg0-client.conf &
 exec --no-startup-id /usr/lib/kdeconnectd &
 #exec --no-startup-id xcalib -v '/home/soul/Acer Swift 3 SF315-41.icm' &
 exec --no-startup-id redshift &
+exec --no-startup-id clipmenud &
 
 #---------------#
 # SPECIAL CASES #
 #---------------#
 
 # Telegram
-for_window [class="Telegram"]                           floating enable,    resize set 400 1000,    move position 20 40
+#for_window [class="Telegram"]                           floating enable,    resize set 400 1000,    move position 20 40
 for_window [title="Media viewer"]                       fullscreen enable
 
 # KeePassXC
@@ -270,6 +275,26 @@ for_window [title="^i3-float$"]                         floating enable,    resi
 for_window [window_role="About"]                        floating enable
 
 for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable,    resize set 380 420
+
+# KDE
+# Plasma compatibility improvements
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
+for_window [class="yakuake"] floating enable
+for_window [class="systemsettings"] floating enable
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] border none, move right 700px, move down 450px
+no_focus [class="plasmashell" window_type="notification"]
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 #------------#
 # MEDIA KEYS #

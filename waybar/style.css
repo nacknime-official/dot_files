@@ -4,13 +4,13 @@
     border: none;
     border-radius: 0;
     font-family: FiraGO, FontAwesome;
-    font-size: 17px;
+    font-size: 16px;
     min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
-    color: @background;
+    background: rgba(1, 10, 50, 0.6);
+    color: @foreground;
     /*color: #d33682;*/
     /*color: #657b83;*/
     /*transition-property: background-color;*/
@@ -29,13 +29,13 @@ window#waybar.hidden {
 #workspaces button {
     padding: 0 0px;     /*only for Gruvbox-Material-Dark*/
     background-color: transparent;
-    color: @background;
+    color: @foreground;
     border-bottom: 3px solid transparent;
 }
 
 #workspaces button.focused {
     /*background-color: #073642;*/
-    border-bottom: 3px solid @background;
+    border-bottom: 3px solid @foreground;
 }
 
 #workspaces button.urgent {
@@ -53,7 +53,7 @@ window#waybar.hidden {
     /*margin:     0px 6px 0px 10px;*/
     /*margin: 2px;*/
     padding: 0 6px;
-    color: @background;
+    color: @foreground;
 }
 
 @keyframes blink {
@@ -94,3 +94,7 @@ label:focus {
 #custom-storage.critical {
     color:      rgba(238, 46, 36, 1);
 }
+
+/* #language { */
+/*   text-transform: uppercase; */
+/* } */

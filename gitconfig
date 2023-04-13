@@ -1,3 +1,13 @@
 [user]
 	name = nacknime-official
-	email = lenovo.maks@gmail.com
+	email = nacknime.official@gmail.com
+[core]
+	excludesfile = /home/nacknime/.gitignore
+[pull]
+  rebase = true
+[rebase]
+  autostash = true
+[github]
+	user = nackime-official
+; [url "git@github.com:"]
+;   insteadOf = https://github.com/

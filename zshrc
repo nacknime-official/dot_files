@@ -1,5 +1,6 @@
 #neofetch
-#export LIBVA_DRIVER_NAME="i965"
+# export LIBVA_DRIVER_NAME="i965"
+export LANG=en_US.UTF-8
 export TERM=xterm-256color
 export _JAVA_AWT_WM_NONREPARENTING=1
 export XCURSOR_THEME="Breeze_Snow"
@@ -7,29 +8,37 @@ export XCURSOR_THEME="Breeze_Snow"
 # wayland
 export XDG_SESSION_TYPE=wayland
 export XDG_CURRENT_DESKTOP=sway
-#export QT_WAYLAND_FORCE_DPI=120
-export QT_QPA_PLATFORM=wayland-egl
+# export QT_WAYLAND_FORCE_DPI=120
+export QT_QPA_PLATFORM="wayland;xcb"
 export SDL_VIDEODRIVER=wayland
 export BEMENU_BACKEND=wayland
+export CLUTTER_BACKEND=wayland
 #export MESA_LOADER_DRIVER_OVERRIDE=i965
 #export GDK_BACKEND=wayland
 
 # firefox
 export MOZ_ENABLE_WAYLAND=1
-export MOZ_ACCELERATED=1
-export MOZ_WEBRENDER=1
+# export MOZ_ACCELERATED=1
+# export MOZ_WEBRENDER=1
+# export MOZ_DBUS_REMOTE=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
+export GTK_THEME="Gruvbox-Material-Dark"
 
 # telegram
 export TDESKTOP_DISABLE_TRAY_COUNTER=1 
-export TDESKTOP_DISABLE_GTK_INTEGRATION=1
+#export TDESKTOP_DISABLE_GTK_INTEGRATION=1
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.dotnet:$HOME/bin:$HOME/.yarn/bin:$PATH
+export PATH=$HOME/.dotnet:$HOME/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 export KEEPASS_PATH=$HOME/Keepass/passwd.kdbx
+
+# golang
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -109,7 +118,12 @@ source $ZSH/oh-my-zsh.sh
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
-   export EDITOR='nvim'
+   if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+     export VISUAL="nvr -cc q --remote-wait"
+   else
+     export EDITOR='nvim'
+   fi
+
  fi
 
 # Compilation flags
@@ -142,7 +156,19 @@ alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd
 
 alias sudo='doas'
 
+alias nv='nvim'
+
+alias dc='docker-compose'
+
+alias mpv1080='mpv --ytdl-format="bestvideo[height=1080]+bestaudio"'
+alias mpv720='mpv --ytdl-format="bestvideo[height=720]+bestaudio"'
+
+alias lg='lazygit'
+
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(zoxide init zsh)"
+
+[[ -s "/home/nacknime/.gvm/scripts/gvm" ]] && source "/home/nacknime/.gvm/scripts/gvm"

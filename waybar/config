@@ -1,7 +1,9 @@
 {
+    "bar_id": "bar-0",
+    "ipc": true,
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
@@ -25,6 +27,9 @@
      },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/window": {
+        "icon": false
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -112,7 +117,7 @@
         "max-length": 40,
         "format-icons": {
             "spotify": "",
-            "default": "🎜"
+            "default": ""
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder

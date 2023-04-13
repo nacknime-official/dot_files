@@ -1,0 +1,12 @@
+{
+  "configurations": {
+    "run": {
+      "adapter": "vscode-go",
+      "configuration": {
+        "request": "launch",
+        "program": "${file}",
+        "mode": "debug",
+        "dlvToolPath": "$GOBIN/dlv" }
+    }
+  }
+}

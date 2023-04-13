@@ -7,7 +7,7 @@ ICON_PATH="gnome-screenshot"
 IMG_V="xdg-open"
 
 full() {
-	maim --hidecursor --quality 9 "$FILENAME"
+	grim -c "$FILENAME"
 	xclip -selection clipboard -t image/png "$FILENAME"
 	notify-send "Screenshot taken." -t 500 --urgency low -i $ICON_PATH
 }

@@ -5,13 +5,14 @@
   "python.linting.mypyEnabled": true,
   "python.linting.mypyPath": "/usr/bin/mypy",
   "python.linting.pylintEnabled": false,
-  "python.formatting.provider": "black",
-  "python.formatting.blackPath": "/usr/bin/black",
+  "python.formatting.provider": "blackd",
+  "python.formatting.blackdPath": "/usr/bin/blackd",
   "pyright.organizeimports.provider": "isort",
 
   "yaml.format.bracketSpacing": true,
+  "prettier.tabWidth": 4,
 
-  "suggest.noselect": false,
+  "suggest.enablePreselect": true,
   "suggest.enablePreview": true,
   "suggest.maxPreviewWidth": 100,
   "suggest.defaultSortMethod": "alphabetical",
@@ -51,24 +52,35 @@
   "git.changedSign.hlGroup": "SignifySignChange",
   "git.removedSign.hlGroup": "SignifySignDelete",
   "git.topRemovedSign.hlGroup": "SignifySignDelete",
-  "git.addGBlameToVirtualText": true,
+  "git.addedSign.text": "▎",
+  "git.changedSign.text": "▎",
+  "git.removedSign.text": "契",
+  "git.topRemovedSign.text": "契",
+  "git.changeRemovedSign.text": "▎",
+  //"git.addGBlameToVirtualText": true,
 
-  "snippets.extends": { "html": ["htmldjango"], "python": ["django"], "markdown": ["html"] },
+  "snippets.extends": { "htmldjango": ["html"], "python": ["django"], "markdown": ["html"] },
+  "emmet.includeLanguages": {"htmldjango": "html"},
+  //"coc.preferences.formatOnSaveFiletypes": ["python"],
   "snippets.triggerCharacters": ["*"],
 
   "suggest.languageSourcePriority": 100,
   "tabnine.priority": 99,
 
-  "eslint.nodePath": "~/.config/yarn/global/node_modules",
-  "eslint.options": {
-    "useEslintrc": false,
-    "env": { "es12": true },
-    "parserOptions": {
-      "ecmaVersion": 12
-    }
-  },
+  "eslint.packageManager": "yarn",
+  "vetur.ignoreProjectWarning": true,
 
   "sql.database": "postgresql",
 
-  "markdownlint.config": {"line-length": false}
+  "markdownlint.config": {"line-length": false},
+
+  "project.rootPatterns": [
+      ".git",
+      "manage.py"
+  ],
+  "bootstrap-classname.filetypes": [
+      "html", "htmldjango"
+  ],
+
+  "go.goplsPath": "gopls"
 }
