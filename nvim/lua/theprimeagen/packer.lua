@@ -88,6 +88,7 @@ return require('packer').startup(function(use)
     'ruifm/gitlinker.nvim',
     requires = 'nvim-lua/plenary.nvim',
   }
+  use('numToStr/Comment.nvim')
 
 end)
 
