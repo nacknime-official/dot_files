@@ -7,13 +7,18 @@ require("tokyonight").setup {
 }
 
 
-function ColorMyPencils(color) 
-	color = color or "tokyonight"
-	vim.cmd.colorscheme(color)
+function ColorMyPencils(color)
+    color = color or "tokyonight"
+    vim.cmd.colorscheme(color)
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-
+    vim.cmd [[
+        hi Normal guibg=none
+        hi NormalFloat guibg=none
+        hi TelescopeNormal guibg=none
+        hi TelescopeBorder guibg=none
+        hi FloatBorder guibg=none
+        hi Pmenu guibg=none
+    ]]
 end
 
 ColorMyPencils()
