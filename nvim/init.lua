@@ -15,7 +15,6 @@ require("theprimeagen")
 require("lazy").setup("plugins", {
     defaults = { lazy = true },
     install = { colorscheme = { "tokyonight" } },
-    checker = { enabled = true },
     change_detection = {
         notify = false,
     }
