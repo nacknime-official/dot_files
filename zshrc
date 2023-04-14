@@ -25,7 +25,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK_THEME="Gruvbox-Material-Dark"
 
 # telegram
-export TDESKTOP_DISABLE_TRAY_COUNTER=1 
+export TDESKTOP_DISABLE_TRAY_COUNTER=1
 #export TDESKTOP_DISABLE_GTK_INTEGRATION=1
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.dotnet:$HOME/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
