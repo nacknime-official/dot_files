@@ -38,3 +38,5 @@ vim.o.concealcursor = "c"
 vim.o.conceallevel = 2
 
 vim.o.statusline = '%t'
+
+vim.g.python3_host_prog = "/usr/bin/python3"
