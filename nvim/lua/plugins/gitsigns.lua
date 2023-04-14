@@ -21,7 +21,7 @@ return {
       vim.keymap.set("n", "<leader>gj", gs.next_hunk)
       vim.keymap.set("n", "<leader>gk", gs.prev_hunk)
       vim.keymap.set("n", "<leader>gl", gs.blame_line)
-      vim.keymap.set("n", "<leader>gr", gs.reset_buffer)
+      vim.keymap.set("n", "<leader>gR", gs.reset_buffer)
       vim.keymap.set("n", "<leader>gu", gs.undo_stage_hunk)
       vim.keymap.set("n", "<leader>gd", gs.diffthis)
     end
