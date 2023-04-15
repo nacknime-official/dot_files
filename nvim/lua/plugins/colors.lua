@@ -9,6 +9,9 @@ function ColorMyPencils(color)
         hi TelescopeBorder guibg=none
         hi FloatBorder guibg=none
         hi Pmenu guibg=none
+        hi NvimTreeNormal guibg=none
+        hi NvimTreeNormalNC guibg=none
+        hi NvimTreeWinSeparator guibg=none
     ]]
 end
 
