@@ -1,7 +1,7 @@
 return {
     "github/copilot.vim",
     -- event = "VeryLazy",
-    keys = { "<leadercp>" },
+    keys = { "<leader>cp" },
     config = function()
         -- disable by default
         vim.g.copilot_enabled = 0
