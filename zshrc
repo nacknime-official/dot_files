@@ -28,7 +28,7 @@ export GTK_THEME="Gruvbox-Material-Dark"
 export TDESKTOP_DISABLE_TRAY_COUNTER=1
 #export TDESKTOP_DISABLE_GTK_INTEGRATION=1
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.dotnet:$HOME/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.dotnet:$HOME/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.local/share/solana/install/active_release/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
