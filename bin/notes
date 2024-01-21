@@ -1,0 +1,1 @@
+neovide --multigrid --neovim-bin ~/.local/bin/lvim --wayland_app_id=nvim-notes ~/.notes.md

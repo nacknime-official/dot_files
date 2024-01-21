@@ -7,31 +7,23 @@ ICON_PATH="gnome-screenshot"
 IMG_V="xdg-open"
 
 full() {
-	grim -c "$FILENAME"
-	xclip -selection clipboard -t image/png "$FILENAME"
+	grimblast copysave screen $FILENAME
 	notify-send "Screenshot taken." -t 500 --urgency low -i $ICON_PATH
 }
 
 full_cl() {
-	grim -c "/tmp/maim_clipboard.png"
-    wl-copy < "/tmp/maim_clipboard.png"
+	grimblast copy screen
 	notify-send "Copied to clipboard." -t 500 --urgency low -i $ICON_PATH
-	rm "/tmp/maim_clipboard.png"
 }
 
 area() {
-	notify-send 'Select area to capture.' --urgency low -i $ICON_PATH
-    grim -g "$(slurp)" -c "$FILENAME"
-	xclip -selection clipboard -t image/png "$FILENAME"
+    grimblast copysave area $FILENAME
 	notify-send "Screenshot taken." -t 500 --urgency low -i $ICON_PATH
 }
 
 area_cl() {
-	notify-send 'Select area to copy to clipboard.' -t 500 --urgency low -i $ICON_PATH
-    grim -g "$(slurp)" -c "/tmp/maim_clipboard.png"
-	wl-copy < "/tmp/maim_clipboard.png"
+    grimblast copy area
 	notify-send "Copied selection to clipboard." -t 500 --urgency low -i $ICON_PATH
-	rm "/tmp/maim_clipboard.png"
 }
 
 open() {

@@ -20,6 +20,7 @@
     ~/.config/i3: i3/
     ~/.config/termite: termite/
     ~/.config/sway: sway/
+    ~/.config/hypr: hypr/
     ~/.config/waybar: waybar/
     ~/.config/nvim: nvim/
     ~/.config/rofi: rofi/
@@ -39,6 +40,8 @@
     ~/.cache/wal/colors-rofi-dark.rasi: pywal/colors-rofi-dark.rasi
     ~/.cache/wal/colors-sway: pywal/colors-sway
     ~/.cache/wal/colors-waybar.css: pywal/colors-waybar.css
+    ~/.config/stretchly/config.json: stretchly/config.json
+    ~/.config/wob: wob/
 
 
 

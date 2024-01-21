@@ -1,0 +1,1 @@
+exec /usr/bin/electron15 /usr/lib/element/app.asar "$@"

@@ -7,7 +7,7 @@ export XCURSOR_THEME="Breeze_Snow"
 
 # wayland
 export XDG_SESSION_TYPE=wayland
-export XDG_CURRENT_DESKTOP=sway
+export XDG_CURRENT_DESKTOP=hyprland
 # export QT_WAYLAND_FORCE_DPI=120
 export QT_QPA_PLATFORM="wayland;xcb"
 export SDL_VIDEODRIVER=wayland
@@ -28,7 +28,7 @@ export GTK_THEME="Gruvbox-Material-Dark"
 export TDESKTOP_DISABLE_TRAY_COUNTER=1
 #export TDESKTOP_DISABLE_GTK_INTEGRATION=1
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.dotnet:$HOME/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.local/share/solana/install/active_release/bin:$PATH
+export PATH=$HOME/.dotnet:$HOME/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.local/share/solana/install/active_release/bin:/opt/google-cloud-cli/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -39,6 +39,18 @@ export KEEPASS_PATH=$HOME/Keepass/passwd.kdbx
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
+
+# flutter
+# export ANDROID_SDK_ROOT='/opt/android-sdk'
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+# export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/ # <-- Before all
+# export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+# export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
+# export PATH=$PATH:$ANDROID_ROOT/emulator
+# export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
+export CHROME_EXECUTABLE=google-chrome-stable
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -164,6 +176,8 @@ alias mpv1080='mpv --ytdl-format="bestvideo[height=1080]+bestaudio"'
 alias mpv720='mpv --ytdl-format="bestvideo[height=720]+bestaudio"'
 
 alias lg='lazygit'
+
+alias dragon='dragon-drag-and-drop'
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh

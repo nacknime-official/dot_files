@@ -29,7 +29,8 @@ power() {
 	elif [ "$SELECTED_STRING" == "suspend" ]; then
         systemctl suspend
 	elif [ "$SELECTED_STRING" == "logout" ]; then
-        swaymsg exit
+        # swaymsg exit
+        hyprctl dispatch exit
 	elif [ "$SELECTED_STRING" == "reboot" ]; then
 		systemctl reboot
 	elif [ "$SELECTED_STRING" == "shutdown" ]; then
@@ -103,7 +104,7 @@ screenshot() {
 }
 
 emoji() {
-	rofimoji --selector-args "-l 20 -width 1344 -columns 2"
+	rofi -modi emoji -show emoji
 }
 
 usage() {
