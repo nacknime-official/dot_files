@@ -49,7 +49,8 @@ export PATH=$JAVA_HOME/bin:$PATH
 # export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
 # export PATH=$PATH:$ANDROID_ROOT/emulator
 # export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
-export CHROME_EXECUTABLE=google-chrome-stable
+export CHROME_EXECUTABLE=$HOME/bin/google-chrome-unsafe
+export PATH=$HOME/.pub-cache/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
