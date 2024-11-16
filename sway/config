@@ -339,7 +339,8 @@ bindsym --to-code {
     Print exec  ~/.config/rofi/rofi.sh -s
     $mod+m exec ~/.config/rofi/rofi.sh -e
     $mod+g exec ~/.config/rofi/rofi.sh -y
-    $mod+Return exec alacritty
+    # $mod+Return exec alacritty
+    $mod+Return exec kitty
     $mod+Tab exec pcmanfm-qt
     $mod+a exec firefox
     $mod+t exec kotatogram-desktop
